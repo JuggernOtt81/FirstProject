@@ -11,10 +11,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
-        <link href="css/site.css" rel="stylesheet">
+        <link href="/css/site.css" rel="stylesheet">
     </head>
 
-<body>
+<body class="d-flex flex-column h-100">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">ToDo</a>
@@ -41,7 +41,7 @@
         </div>
     </nav>
     <!-- ======= Hero Section ======= -->
-    <main id="hero">
+    <main class="flex-shrink-0" id="hero">
         <div class="container col-xxl-8 px-4 py-5">
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
                 <div class="col-10 col-sm-8 col-lg-6">
@@ -67,6 +67,30 @@
             </div>
         </div>
     </main>
+    <footer class="mt-auto py-3 bg-dark">
+        <div class="container-fluid text-center">
+            <div class="row">
+                <div class="col-3">
+                    <span class="footerspan">
+                        image: <a href="#"><i>null</i></a>
+                    </span>
+                </div>
+                <div class="col-6">
+                    <span class="footerspan">
+                        GENERIC DESCRIPTION
+                    </span>
+                </div>
+                <div class="col-3">
+                    <span class="footerspan">
+                        <a href="https://github.com/JuggernOtt81?tab=repositories"
+                            target="_blank">view
+                            code</a></span>
+                </div>
+            </div>
+        </div>
+            <!-- <span class="footerspan">Place sticky footer content here.</span> -->
+        </div>
+    </footer>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">

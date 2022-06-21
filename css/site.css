@@ -1,8 +1,38 @@
+:root {
+    --primary-color: #1d5888;
+    --secondary-color: #ff993b;
+    --dark-color: #292929;
+    --white-color: #e7e7e7;
+}
+
+body {
+    color: var(--dark-color);
+}
+
+nav {
+    background-color: var(--dark-color);
+}
+
+footer {
+    background-color: var(--dark-color);
+}
+
 body,
 html {
     color: white;
     height: 100%;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary-color);
+}
+
+
 
 #hero {
     min-height: 100vh;
@@ -50,3 +80,46 @@ html {
     margin: .25em;
     padding: .5em;
 }
+
+main>.container {
+    padding: 60px 15px 0;
+}
+
+.footerspan {
+    color: white;
+    font-size: xx-small;
+}
+a.nav-link:hover{
+    font-variant-caps:small-caps;
+    color: #ffee10;
+    text-shadow: 0 0 5px #ffee10;   
+}
+.portfolio{
+    position: relative; 
+    display: block;
+    text-align: center;
+    transition: .5s;
+}
+.portfolio::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;}
+
+.portfolio:visited {}
+
+.portfolio:hover::before {
+    transform: scale(1.1);
+}
+
+.portfolio:hover {  
+  
+}
+    
+
+.portfolio:active {}
