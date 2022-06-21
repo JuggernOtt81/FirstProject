@@ -1,5 +1,14 @@
+:root {
+
+}
+
 main>.container {
     padding: 60px 15px 0;
+}
+
+.footerspan {
+    color: white;
+    font-size: xx-small;
 }
 
 body,
