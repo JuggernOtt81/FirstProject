@@ -1,20 +1,27 @@
 :root {
-
+--primary-color: #1d5888;
+--secondary-color: #ff993b;
+--dark-color: #292929;
+--white-color:#e7e7e7;
+}
+body {
+color: var(--dark-color);
 }
 
-main>.container {
-    padding: 60px 15px 0;
+nav {
+    background-color: var(--dark-color);
 }
-
-.footerspan {
-    color: white;
-    font-size: xx-small;
+footer {
+    background-color: var(--dark-color);
 }
-
 body,
 html {
     color: white;
     height: 100%;
+}
+h1,h2,h3,h4,h5,h6
+{
+    color: var(--primary-color);
 }
 
 #hero {
@@ -62,4 +69,12 @@ html {
     color: #212121;
     margin: .25em;
     padding: .5em;
+}
+main>.container {
+    padding: 60px 15px 0;
+}
+
+.footerspan {
+    color: white;
+    font-size: xx-small;
 }
