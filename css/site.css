@@ -93,12 +93,24 @@ a.nav-link:hover{
     font-variant-caps:small-caps;
     color: #ffee10;
     text-shadow: 0 0 5px #ffee10;   
+    transform: rotate(0.015turn);
+    transition: .5s;
+}
+a.footerlink::before{
+    transform: scale(1.0);
+}
+.footerlink:hover{
+    font-variant-caps:small-caps;
+    transform: scale(1.5) translate(-100%, -100%);
+    color: #ffee10;
+    text-shadow: 0 0 5px #ffef19;   
 }
 .portfolio{
     position: relative; 
     display: block;
     text-align: center;
     transition: .5s;
+    
 }
 .portfolio::before{
     content: '';
