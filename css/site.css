@@ -104,6 +104,7 @@ a.footerlink::before{
     transform: scale(1.5) translate(-100%, -100%);
     color: #ffee10;
     text-shadow: 0 0 5px #ffef19;   
+    
 }
 .portfolio{
     position: relative; 
