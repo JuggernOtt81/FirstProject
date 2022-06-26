@@ -7,20 +7,36 @@
 
 body {
     color: var(--dark-color);
+    height: 90vh;
+    margin: 0;
 }
 
 nav {
     background-color: var(--dark-color);
+    min-height: 5vh;
 }
 
 footer {
     background-color: var(--dark-color);
 }
 
-body,
-html {
-    color: white;
-    height: 100%;
+html, body
+ {
+    padding: auto;
+}
+
+.page-content{
+    min-height: 90vh;
+    margin-bottom: 5vh;
+}
+
+.page-content::after{
+    content: "";
+    display: block;
+}
+
+footer, .page-content::after{
+    min-height: 5vh;
 }
 
 h1,
@@ -33,8 +49,12 @@ h6 {
 }
 
 
+.full-height{
+    min-height: 100vh;
+}
 
-#hero {
+
+.common-bg {
     min-height: 100vh;
     background: #141E30;
     /* fallback for old browsers */
@@ -82,7 +102,8 @@ h6 {
 }
 
 main>.container {
-    padding: 60px 15px 0;
+    
+    /* padding: 60px 15px 0; */
 }
 
 .footerspan {
