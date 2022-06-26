@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>CF Project #1</title>
+    <title>TITLE GOES HERE</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,43 +11,64 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
-    <!-- Convert this to an external style sheet -->
-    <link href="/css/site.css" rel="stylesheet">
-</head>
+    <!-- Font Awesome CSS -->
+    <link href="/css/font-awesome-6/css/all.css" rel="stylesheet">
+    <link href="/css/font-awesome-6/webfonts/" rel="stylesheet">
 
-<body class="d-flex flex-column h-100">
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">ToDo</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    <li class="nav-item">
-                        <a class="nav-link"href="/index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">The App</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">The Code</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/base.html">The Base</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active"  aria-current="page" href="/contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- ======= Hero Section ======= -->
+    <!-- Custom CSS -->
+    <link href="/css/site.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link href="/img/favicon.png" type="image/png" rel="icon">
+ </head>
+
+<body class="d-flex flex-column h-100 common-bg">
+    <div class="page-content">
+        <!-- ======= START Nav Section ======= -->
+        <section nav>
+            <nav class="navbar navbar-expand-md fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand nav-link portfolio justify-content-start"
+                        href="https://juggernott81.github.io/" target="_blank">Nav-Brand</a>
+                    <button class="navbar-toggler bg-dark navbar-dark" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/index.html" target="_blank">Link 0</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" target="_parent">Link 1</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" target="_self">Link 2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" target="_top">Link 3</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/base.html">The Base</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                            <li class="nav-item">
+                                <a class="nav-link portfolio" href="https://www.JuggernOtt81.com" target="_blank">Lawson
+                                    Ott's Portfolio</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </section>
+        <!-- ======= END Nav Section ======= -->
+        <!-- ======= START Main Section ======= -->
+        <section main>
     <main class="flex-shrink-0" id="hero">
         <div class="container col-xxl-8 px-4 py-5">
-            <h1 class="text-center mb-3">Contact Me</h1>
+            <h1 class="text-center mb-3 mt-5">Contact Me</h1>
             <form name="CFP1-ToDo-ContactForm" method="POST" data-netlify-recaptcha="true" data-netlify="true">
                 <div class="row mb-1">
                     <div class="col">
@@ -92,34 +113,85 @@
             </form>
         </div>
     </main>
-    <footer class="mt-auto py-3 bg-dark">
-        <div class="container-fluid text-center">
-            <div class="row">
-                <div class="col-3">
-                    <span class="footerspan">
-                        image: <a href="#"><i>null</i></a>
-                    </span>
-                </div>
-                <div class="col-6">
-                    <span class="footerspan">
-                        GENERIC DESCRIPTION
-                    </span>
-                </div>
-                <div class="col-3">
-                    <span class="footerspan">
-                        <a href="https://github.com/JuggernOtt81?tab=repositories"
-                            target="_blank">view
-                            code</a></span>
+</section>
+<!-- ======= END Main Section ======= -->
+</div>
+<!-- ======= START Footer Section ======= -->
+<section footer>
+<footer class="m-0 bg-dark">
+    <div class="row container-fluid text-center">
+
+        <div class="col-3 justify-content-start">
+            <span class="footerspan ">
+                <a class="footerlink" href="https://www.juggernott81.com"> &copy; 2022</a>
+            </span>
+        </div>
+        <!-- want to make this middle div col do something different on smaller screens, maybe cycle through the <a href="#"><i>icon</i>links</a> one at a time... but how? -->
+        <div class="col-2">
+        </div>
+        <div class="col-2 justify-content-center">
+            <div class="hwrap">
+                <div class="hmove">
+                    <div class="hitem"><a class="footerlink" href="https://github.com/JuggernOtt81"
+                            target="_blank"><i class="fa-brands fa-github"></i></a></div>
+                    <div class="hitem"><a class="footerlink" href="https://www.linkedin.com/in/lawsonott/"
+                            target="_blank"><i class="fa-brands fa-linkedin"></i></a></div>
+                    <div class="hitem"><a class="footerlink"
+                            href="https://stackoverflow.com/users/9724160/juggern-ott" target="_blank"><i
+                                class="fa-brands fa-stack-overflow"></i></a></div>
+                    <div class="hitem"><a class="footerlink" href="https://twitter.com/juggernott81"
+                            target="_blank"><i class="fa-brands fa-twitter"></i></a></div>
+                    <div class="hitem"><a class="footerlink"
+                            href="https://www.youtube.com/channel/UCo-xCEut1wxPv14RMFznbOg" target="_blank"><i
+                                class="fa-brands fa-youtube"></i></a></div>
+                    <div class="hitem"><a class="footerlink" href="https://www.reddit.com/u/juggernott81"
+                            target="_blank"><i class="fa-brands fa-reddit"></i></a></div>
+                    <div class="hitem"><a class="footerlink" href="https://www.quora.com/profile/Juggern-Ott"
+                            target="_blank"><i class="fa-brands fa-quora"></i></a></div>
+                    <div class="hitem"><a class="footerlink" href="https://www.tiktok.com/@juggernott81"
+                            target="_blank"><i class="fa-brands fa-tiktok"></i></a></div>
+                    <div class="hitem"><a class="footerlink" href="https://codepen.io/JuggernOtt81/pen/gzqNmW"
+                            target="_blank"><i class="fa-brands fa-codepen"></i></a></div>
+                    <div class="hitem"><a class="footerlink" href="https://www.freecodecamp.org/juggernott81"
+                            target="_blank"><i class="fa-brands fa-free-code-camp"></i></a></div>
+                    <div class="hitem"><a class="footerlink"
+                            href="https://play.google.com/store/apps/developer?id=JuggernOtt81&hl=en_US&gl=US"
+                            target="_blank"><i class="fa-brands fa-google-play"></i></a></div>
+                    <div class="hitem"><a class="footerlink"
+                            href="https://developer.apple.com/forums/profile/JuggernOtt81" target="_blank"><i
+                                class="fa-brands fa-apple"></i></a></div>
+                    <div class="hitem"><a class="footerlink"
+                            href="https://techcommunity.microsoft.com/t5/user/viewprofilepage/user-id/1305014#profile"
+                            target="_blank"><i class="fa-brands fa-microsoft"></i></a></div>
+                    <div class="hitem"><a class="footerlink" href="https://youtu.be/yJ9glRHCLW8" target="_blank"
+                            style="color:white"><i class="iconify" data-icon="mdi:rabbit"></i></a></div>
+                    <div class="hitem"><a class="footerlink" href="#" target="_blank"></a></div>
                 </div>
             </div>
         </div>
-            <!-- <span class="footerspan">Place sticky footer content here.</span> -->
+        <div class="col-2">
         </div>
-    </footer>
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
-    </script>
+        <div class="col-3 justify-content-end">
+            <span class="footerspan">
+                <a class="footerlink" href="https://github.com/JuggernOtt81?tab=repositories"
+                    target="_blank">view code</a></span>
+        </div>
+    </div>
+
+</footer>
+</section>
+<!-- ======= END Footer Section ======= -->
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+</script>
+<!-- Iconify JS -->
+<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+<!-- Font Awesome JS -->
+<script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
+<!-- Custom JS -->
+<script src="js/site.js"></script>
 </body>
 
 </html>
