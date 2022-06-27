@@ -4,7 +4,16 @@
     --dark-color: #292929;
     --white-color: #e7e7e7;
 }
-
+.active{
+    color:#ffffff
+}
+a.nav-link:hover.active{
+    font-variant-caps:normal;
+    color: #ffffff;
+    text-shadow: 0 0 5px #520faa;   
+    transform: rotate(0.000turn);
+    transition: .30s;
+}
 body {
     color: var(--dark-color);
     height: 90vh;
