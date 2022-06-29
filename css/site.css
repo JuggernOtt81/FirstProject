@@ -193,3 +193,38 @@ a.footerlink::before{
   }
   .hmove { animation: tickerh linear 60s infinite; }
   .hmove:hover { animation-play-state: paused; }
+
+  .description{
+    /* blank for now */
+}
+  .d-brief{
+    font-size: larger;
+    color: burlywood;
+  }
+  .d-paragraph{
+    color: #e7e7e7;
+  }
+  .d-t-span{
+    font-size: smaller;
+  }
+  
+.checklist{
+    color:mistyrose;
+}
+.tech-used{
+    background-color:var(--dark-color);
+    padding:20px;
+}
+
+.icon-bs{
+    color: #7e0af9;
+}
+.icon-js{
+    color: #f0db4f;
+}
+.icon-html5{
+    color: #e34c26;
+}
+.icon-css3{
+    color: #264de4;
+}
