@@ -31,7 +31,10 @@ nav {
     background-color: var(--dark-color);
     min-height: 5vh;
 }
-
+.para{
+    color: var(--secondary-color);
+    background-color: var(--dark-color);
+}
 footer {
     background-color: var(--dark-color);
 }

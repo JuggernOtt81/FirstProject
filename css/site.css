@@ -4,25 +4,30 @@
     --dark-color: #292929;
     --white-color: #e7e7e7;
 }
-.active{
-    color:#ffffff
+
+.active {
+    color: #ffffff
 }
-a.nav-link:hover.active{
-    font-variant-caps:normal;
+
+a.nav-link:hover.active {
+    font-variant-caps: normal;
     color: #ffffff;
-    text-shadow: 0 0 5px #520faa;   
+    text-shadow: 0 0 5px #520faa;
     transform: rotate(0.000turn);
     transition: .30s;
 }
+
 body {
     color: var(--dark-color);
     display: flex;
     flex-direction: column;
 }
-.content{
+
+.content {
     flex: 1 0 auto;
 }
-.footer{
+
+.footer {
     flex-shrink: 0;
     position: sticky;
 }
@@ -36,8 +41,8 @@ footer {
     background-color: var(--dark-color);
 }
 
-html, body
- {
+html,
+body {
     height: 100%;
 }
 
@@ -71,7 +76,7 @@ h6 {
 }
 
 main>.container {
-    
+
     /* padding: 60px 15px 0; */
 }
 
@@ -79,31 +84,36 @@ main>.container {
     color: white;
     font-size: xx-small;
 }
-a.nav-link:hover{
-    font-variant-caps:small-caps;
+
+a.nav-link:hover {
+    font-variant-caps: small-caps;
     color: #ffee10;
-    text-shadow: 0 0 5px #ffee10;   
+    text-shadow: 0 0 5px #ffee10;
     transform: rotate(0.015turn);
     transition: .5s;
 }
-a.footerlink::before{
+
+a.footerlink::before {
     transform: scale(1.0);
 }
-.footerlink:hover{
-    font-variant-caps:small-caps;
+
+.footerlink:hover {
+    font-variant-caps: small-caps;
     transform: scale(1.5) translate(-100%, -100%);
     color: #ffee10;
-    text-shadow: 0 0 5px #ffef19;   
-    
+    text-shadow: 0 0 5px #ffef19;
+
 }
-.portfolio{
-    position: relative; 
+
+.portfolio {
+    position: relative;
     display: block;
     text-align: center;
     transition: .5s;
-    
+
 }
-.portfolio::before{
+
+.portfolio::before {
     /* content: ''; */
     position: absolute;
     top: 0;
@@ -112,7 +122,8 @@ a.footerlink::before{
     height: 100%;
     transition: .5s;
     transform: scale(.9);
-    z-index: -1;}
+    z-index: -1;
+}
 
 .portfolio:visited {}
 
@@ -120,72 +131,101 @@ a.footerlink::before{
     transform: scale(1.1);
 }
 
-.portfolio:hover {  
-  
-}    
+.portfolio:hover {}
 
 .portfolio:active {}
 
 /* (A) FIXED WRAPPER */
 .hwrap {
-    overflow: hidden; /* HIDE SCROLL BAR */
+    overflow: hidden;
+    /* HIDE SCROLL BAR */
     background: rgba(0, 0, 0, 0);
-  }
-   
-  /* (B) MOVING TICKER WRAPPER */
-  .hmove { display: flex; }
-  
-  /* (C) ITEMS - INTO A LONG HORIZONTAL ROW */
-  .hitem {
+}
+
+/* (B) MOVING TICKER WRAPPER */
+.hmove {
+    display: flex;
+}
+
+/* (C) ITEMS - INTO A LONG HORIZONTAL ROW */
+.hitem {
     flex-shrink: 0;
     width: 100%;
     box-sizing: border-box;
     padding: 10px;
     text-align: center;
-  }
-   
-  /* (D) ANIMATION - MOVE ITEMS FROM RIGHT TO LEFT */
-  /* 4 ITEMS -400%, CHANGE THIS IF YOU ADD/REMOVE ITEMS */
-  @keyframes tickerh {
-    0% { transform: translate3d(100%, 0, 0); }
-    100% { transform: translate3d(-1500%, 0, 0); }
-  }
-  .hmove { animation: tickerh linear 60s infinite; }
-  .hmove:hover { animation-play-state: paused; }
+}
 
-  .description{
+/* (D) ANIMATION - MOVE ITEMS FROM RIGHT TO LEFT */
+/* 4 ITEMS -400%, CHANGE THIS IF YOU ADD/REMOVE ITEMS */
+@keyframes tickerh {
+    0% {
+        transform: translate3d(100%, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-1500%, 0, 0);
+    }
+}
+
+.hmove {
+    animation: tickerh linear 60s infinite;
+}
+
+.hmove:hover {
+    animation-play-state: paused;
+}
+
+.description {
     /* blank for now */
 }
-  .d-brief{
+
+.d-brief {
     font-size: larger;
     color: burlywood;
-  }
-  .d-paragraph{
-    color: #e7e7e7;
-  }
-  .d-t-span{
-    font-size: smaller;
-  }
-  
-.checklist{
-    color:mistyrose;
-}
-.tech-used{
 }
 
-.icon-bs{
+.d-paragraph {
+    color: #e7e7e7;
+}
+
+.d-t-span {
+    font-size: smaller;
+}
+
+.checklist {
+    color: mistyrose;
+}
+
+.checklist>li i {
+    color: var(--secondary-color);
+}
+
+.tech-used {}
+
+.icon-bs {
     color: #7e0af9;
     font-size: xx-large;
 }
-.icon-js{
+
+.icon-js {
     color: #f0db4f;
     font-size: xx-large;
 }
-.icon-html5{
+
+.icon-html5 {
     color: #e34c26;
     font-size: xx-large;
 }
-.icon-css3{
+
+.icon-css3 {
     color: #264de4;
     font-size: xx-large;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
 }

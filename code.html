@@ -17,6 +17,7 @@
 
     <!-- Custom CSS -->
     <link href="/css/site.css" rel="stylesheet">
+    <link href="/css/prism.css" rel="stylesheet">
 
     <!-- Favicon -->
     <link href="/img/favicon.png" type="image/png" rel="icon">
@@ -29,7 +30,8 @@
             <nav class="navbar navbar-expand-md fixed-top">
                 <div class="container-fluid">
                     <a class="navbar-brand nav-link portfolio justify-content-start"
-                        href="https://juggernott81.github.io/" target="_blank"><img style="max-height: 30px;" src="/img/Github-profile.png"></a>
+                        href="https://juggernott81.github.io/" target="_blank"><img style="max-height: 30px;"
+                            src="/img/Github-profile.png"></a>
                     <button class="navbar-toggler bg-dark navbar-dark" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
                         aria-label="Toggle navigation">
@@ -68,7 +70,26 @@
         <!-- ======= START Main Section ======= -->
         <section main>
             <main class="content" id="hero">
-                <div class="container col-xxl-8 px-4 py-5">
+                <div class="container py-5 px-5">
+                    <div class="row row-cols-1 row-cols-lg-2">
+                        <div class="col-lg-8">
+                            <pre class="line-numbers">
+                                <code class="language-javascript">
+                                    //Call Hello World
+                                    function helloWorld(){
+                                        alert("Hello World!");
+                                    }
+                                </code>
+                            </pre>
+                        </div>
+                        <div class="col-lg-4">
+                            <p style="color:deepskyblue;">
+                                The Code is structured in one function.
+                            </p>
+                            <h5 style="color:wheat;">Hello World</h5>
+                            <p style="color:wheat;"><em><strong>helloWorld</strong></em> is a <em>function</em> that displays an <em>alert</em> with the message, "Hello World!"</p>
+                        </div>
+                    </div>
                 </div>
             </main>
         </section>
@@ -148,8 +169,18 @@
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
     <!-- Font Awesome JS -->
     <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
+    <!-- Prism JS -->
+    <script>
+        Prism.plugins.NormalizeWhitespace.setDefaults({
+            'remove-trailing': true,
+            'remove-indent': true,
+            'left-trim': true,
+            'right-trim': true
+        })
+    </script>
     <!-- Custom JS -->
     <!-- <script src="js/site.js"></script> -->
+
 </body>
 
 </html>
