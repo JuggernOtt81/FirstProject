@@ -26,9 +26,7 @@ body {
     flex-shrink: 0;
     position: sticky;
 }
-p{
-color: snow;
-}
+
 nav {
     background-color: var(--dark-color);
     min-height: 5vh;
