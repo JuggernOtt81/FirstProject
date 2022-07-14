@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>APP: N' Cent-i-vize</title>
+    <title>CODE: N' Cent-i-vize</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,9 +17,7 @@
 
     <!-- Custom CSS -->
     <link href="/css/site.css" rel="stylesheet">
-
-    <!-- Page Specific CSS -->
-    <link href="/f-templates/app-css/app.css"
+    <link href="/css/prism.css" rel="stylesheet">
 
     <!-- Favicon -->
     <link href="/img/favicon.png" type="image/png" rel="icon">
@@ -32,7 +30,8 @@
             <nav class="navbar navbar-expand-md fixed-top">
                 <div class="container-fluid">
                     <a class="navbar-brand nav-link portfolio justify-content-start"
-                        href="https://juggernott81.github.io/" target="_blank"><img style="max-height: 30px;" src="/img/Github-profile.png"></a>
+                        href="https://juggernott81.github.io/" target="_blank"><img style="max-height: 30px;"
+                            src="/img/Github-profile.png"></a>
                     <button class="navbar-toggler bg-dark navbar-dark" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
                         aria-label="Toggle navigation">
@@ -70,9 +69,28 @@
         <!-- ======= END Nav Section ======= -->
         <!-- ======= START Main Section ======= -->
         <section main>
-            <main class="flex-shrink-0">
-                <div class="container">
-
+            <main class="content" id="hero">
+                <div class="container py-5 px-5">
+                    <h2 class="mt-4 border-1 border-bottom border-dark">The Code</h2>
+                    <div class="row row-cols-1 row-cols-lg-2">
+                        <div class="col-lg-8">
+                            <pre class="line-numbers">
+                                <code class="language-javascript">
+                                    //Call Hello World
+                                    function helloWorld(){
+                                        alert("Hello World!");
+                                    }
+                                </code>
+                            </pre>
+                        </div>
+                        <div class="col-lg-4">
+                            <p style="color:deepskyblue;">
+                                The Code is structured in one function.
+                            </p>
+                            <h4 style="color:wheat;">Hello World</h4>
+                            <p style="color:wheat;"><em><strong>helloWorld</strong></em> is a <em>function</em> that displays an <em>alert</em> with the message, "Hello World!"</p>
+                        </div>
+                    </div>
                 </div>
             </main>
         </section>
@@ -135,7 +153,7 @@
                 </div>
                 <div class="col-3 justify-content-end">
                     <span class="footerspan">
-                        <a class="footerlink" href="https://github.com/JuggernOtt81/Showcase/blob/main/app.html"
+                        <a class="footerlink" href="https://github.com/JuggernOtt81/Showcase/blob/main/code.html"
                             target="_blank">view code</a></span>
                 </div>
             </div>
@@ -152,10 +170,18 @@
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
     <!-- Font Awesome JS -->
     <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
+    <!-- Prism JS -->
+    <script>
+        Prism.plugins.NormalizeWhitespace.setDefaults({
+            'remove-trailing': true,
+            'remove-indent': true,
+            'left-trim': true,
+            'right-trim': true
+        })
+    </script>
     <!-- Custom JS -->
-    <script src="js/site.js"></script>
-    <!-- Page Specific JS -->
-    <script src="/f-templates/app-js/app.js"></script>
+    <!-- <script src="js/site.js"></script> -->
+
 </body>
 
 </html>
