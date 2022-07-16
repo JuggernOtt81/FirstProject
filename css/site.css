@@ -16,7 +16,9 @@ a.nav-link:hover.active {
     transform: rotate(0.000turn);
     transition: .30s;
 }
-
+p{
+    color: snow;
+}
 body {
     color: var(--dark-color);
     display: flex;

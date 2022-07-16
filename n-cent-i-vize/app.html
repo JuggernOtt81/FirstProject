@@ -70,57 +70,48 @@
         <!-- ======= END Nav Section ======= -->
         <!-- ======= START Main Section ======= -->
         <section main>
-            <main class="content" id="hero">
-                    <main id="content" class="flex-shrink-0">
-                        <div class="container px-4 py-5 mt-5">
-                            <div class="row">
+            <main id="hero">                
+                <div class="container py-5 mt-5">
+                    <div class="row row-cols-1 row-cols-lg-2">
+                        <div class="col col-lg-4 border-2 border-end">
+                            <h1 class="fw-bold lh-1 mb-3">'N-Cent-i-vize': A Coding Challenge</h1>
+                            <h4 class="lead">Live life one loop at a time. A javascript coding exercise using loops.
+                                Write a program the displays the numbers from 0 to 100. Display the even numbers in
+                                <strong>BOLD.</strong></h4>
+                            <h2 class="mt-5 border-bottom border-2">Instructions</h2>
+                            <p>Enter a starting value and a ending value.<br>Press the <span class="btn-primary" style="padding-left: 3px; padding-right: 3px; border-radius: 3%;">Process</span> button and the
+                                values will appear.
+                            </p>
+                        </div>                            
+                        <div class="col col-lg-8">
+                            <h5>Enter Values</h5>
+                            <div class="row gy-2">
                                 <div class="col">
-                                    <div class="row">
-                                        <div class="col border-2 border-end">
-                                            <h1 class="fw-bold lh-1 mb-3">'N-Cent-i-vize': A Coding Challenge</h1>
-                                            <h4 class="lead">Live life one loop at a time. A javascript coding exercise using loops.
-                                                Write a program the displays the numbers from 0 to 100. Display the even numbers in
-                                                <strong>BOLD.</strong></h4>
-                                            <h2 class="mt-5 border-bottom border-2">Instructions</h2>
-                                            <p>Enter a starting value and a ending value. Press the button and the
-                                                values will appear.
-                                            </p>
-                                        </div>
-                                    </div>
+                                    <input type="number" class="form-control" id="startValue" placeholder="Start Value" value="0" control-id="ControlID-1">
                                 </div>
                                 <div class="col">
-                                    <h5>Enter Values</h5>
-                                    <div class="row gy-2">
-                                        <div class="col">
-                                            <input type="number" class="form-control" id="startValue" placeholder="Start Value" value="0" control-id="ControlID-1">
-                                        </div>
-                                        <div class="col">
-                                            <input type="number" class="form-control" id="endValue" placeholder="End Value" value="100" control-id="ControlID-2">
-                                        </div>
-                                        <div class="col-12 d-flex justify-content-end">
-                                            <button id="submitBtn" class="btn btn-primary btn-lg" control-id="ControlID-3">Run</button>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            <h2 class="mt-5 border-bottom border-2">Results</h2>
-                                            <div class="table-responsive">
-                                                <table class="table table-striped">
-                                                    <tbody id="output">
-                
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                
+                                    <input type="number" class="form-control" id="endValue" placeholder="End Value" value="100" control-id="ControlID-2">
+                                </div>
+                                <div class="col-12 d-flex justify-content-end">
+                                    <button id="submitButton" class="btn btn-primary btn-lg" control-id="ControlID-3">Process</button>
                                 </div>
                             </div>
-                
-                
+                            <div class="row">
+                                <div class="col">
+                                    <h2 class="mt-5 border-bottom border-2">Results</h2>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <tbody id="output">
+        
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>                                                   
                         </div>
-                    </main>
-                </div>
+                    </div>
+                    </div>
+                </div>                               
             </main>
         </section>
         <!-- ======= END Main Section ======= -->
