@@ -1,6 +1,4 @@
-
-//get the values from the page
-//start or controller function
+//start or controller function(get the values from the page)
 function getValues(){
     //get values from the page
     let startValue = document.getElementById("startValue").value;    
@@ -8,8 +6,7 @@ function getValues(){
 
     //parse into Integers
     startValue = parseInt(startValue);
-    endValue = parseInt(endValue);
-    
+    endValue = parseInt(endValue);   
 
     if(Number.isInteger(startValue) && Number.isInteger(endValue)){
         //call generateNumbers()
@@ -21,7 +18,6 @@ function getValues(){
         alert("YOU MUST ENTER INTEGERS!");
     }
 }
-
 //generate numbers from the start value to the end value
 //logic function(s)
 function generateNumbers(startValue, endValue){
@@ -31,9 +27,7 @@ function generateNumbers(startValue, endValue){
         numbers.push(i);
     }
     return numbers;
-
 }
-
 //display the numbers, and mark the EVEN numbers BOLD
 //display or view function(s)
 function displayNumbers(numbers){
@@ -48,15 +42,6 @@ function displayNumbers(numbers){
             className = "odd";
         }
         templateRows += `<tr><td class="${className}">${number}</td></tr>`;
-        
-
-
-/*         if(number % 2 == 0){
-            templateRows += `<tr><td><strong>${number}</strong></td></tr>`;
-        }else
-        {
-            templateRows += `<tr><td>${number}</td></tr>`;
-        } */
     }
     document.getElementById("results").innerHTML = templateRows;
 }

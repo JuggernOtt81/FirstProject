@@ -69,26 +69,97 @@
         <!-- ======= END Nav Section ======= -->
         <!-- ======= START Main Section ======= -->
         <section main>
-            <main class="content" id="hero">
-                <div class="container py-5 px-5">
+            <main class="content flex-shrink-0" id="hero">
+                <div class="container py-5 px-5 mt-5">
                     <h2 class="mt-4 border-1 border-bottom border-dark">The Code</h2>
                     <div class="row row-cols-1 row-cols-lg-2">
                         <div class="col-lg-8">
-                            <pre class="line-numbers">
-                                <code class="language-javascript">
-                                    //Call Hello World
-                                    function helloWorld(){
-                                        alert("Hello World!");
+                            <pre class="line-numbers"><code class="language-javascript">
+                                    //start or controller function(get the values from the page)
+                                    function getValues(){
+                                        //get values from the page
+                                        let startValue = document.getElementById("startValue").value;    
+                                        let endValue = document.getElementById("endValue").value;
+
+                                        //parse into Integers
+                                        startValue = parseInt(startValue);
+                                        endValue = parseInt(endValue);   
+
+                                        if(Number.isInteger(startValue) && Number.isInteger(endValue)){
+                                            //call generateNumbers()
+                                            let numbers = generateNumbers(startValue, endValue);
+                                            //call displayNumbers
+                                            displayNumbers(numbers);
+                                        }
+                                        else{
+                                            alert("YOU MUST ENTER INTEGERS!");
+                                        }
+                                    }
+                                    //generate numbers from the start value to the end value
+                                    //logic function(s)
+                                    function generateNumbers(startValue, endValue){
+                                        let numbers = [];
+                                        for (let i = startValue; i <= endValue; i++){
+                                            //this will execute in a loop until i = endValue
+                                            numbers.push(i);
+                                        }
+                                        return numbers;
+                                    }
+                                    //display the numbers, and mark the EVEN numbers BOLD
+                                    //display or view function(s)
+                                    function displayNumbers(numbers){
+                                        let templateRows = "";
+                                        for (let i = 0; i < numbers.length; i++) {
+                                            let number = numbers[i];
+                                            
+                                            if(number % 2 == 0){
+                                                className = "even";
+                                            }else
+                                            {
+                                                className = "odd";
+                                            }
+                                            //the Prism Library has some limitations when it comes to 
+                                            //Template Literals 
+                                            //(click 'view code' in the footer to see the full code)
+                                            templateRows += `<tr><td class="${className}">${number}</td></tr>`;
+                                        }
+                                        document.getElementById("results").innerHTML = templateRows;
                                     }
                                 </code>
                             </pre>
                         </div>
                         <div class="col-lg-4">
-                            <p style="color:deepskyblue;">
-                                The Code is structured in one function.
+                            <p style="color:deepskyblue;">The code is structured in three functions:</p>
+                            <p></p>
+                            <h4 style="color:wheat;">getValues()</h4>
+                            <p style="color:wheat;"><strong>getValues</strong> gets the user input from the page in the form of <strong>strings</strong> by utilizing
+                                <strong>getElementById</strong> to pull the values from the <strong>input</strong> fields.<br>
+                                Then we apply <strong>parseInt</strong> to the strings to get <strong>Integers</strong> to use for our purposes.<br>
+                                The <strong>if</strong> statement <strong>validates</strong> that <em>both</em> inputs were indeed Integers and only allows use to proceed 
+                                if that is the case. Otherwise, we get an error message telling us to fix the input(s).
                             </p>
-                            <h4 style="color:wheat;">Hello World</h4>
-                            <p style="color:wheat;"><em><strong>helloWorld</strong></em> is a <em>function</em> that displays an <em>alert</em> with the message, "Hello World!"</p>
+
+                            <h4 style="color:wheat;">generateNumbers()</h4>
+                            <p style="color:wheat;"><strong>generateNumbers</strong> takes in two parameters: <strong>startValue</strong> and
+                                <strong>endValue</strong>. We create an array variable called <strong>numbers</strong> to use in a <strong>for</strong> loop.<br>
+                                The array begins at <strong>index[0]</strong> which contains the value of <strong>startValue</strong> which we will take and add 1 to, then will <strong>push</strong> the new number into the next index slot and repeat this process until we reach our <strong>endValue</strong>.<br>
+                                Then we will <strong>return</strong> (send back out to the parent program) the newest version of <strong>numbers</strong> containing each Integer we processed.
+                            </p>
+
+
+                            <h4 style="color:wheat;">displayNumbers()</h4>
+                            <p style="color:wheat;"><strong>displayNumbers</strong> accepts the parameter <strong>numbers</strong> passed to it.<br>
+                                This is the array that holds the values between <strong>startValue</strong> and <strong>endValue</strong>. <br>
+                                We declare an empty string called <strong>templateRows</strong> which will be programmatically injected into the HTML as part of the table.<br>
+                                The upcoming <strong>for</strong> loop will append a new value to <strong>templateRows</strong> based on whether the integer it is analyzing has a remainder when divided by 2.<br>
+                                If there is a remainder, then the number was <strong>odd</strong> and so we will assign "odd" to the string <em>className()</em><br>
+                                Alternatively, if there is no remainder, then 2 divides evenly into the Integer of the moment and must be even, and in that case, <em>className</em> will be assigned "even".<br>
+                                Now here's where we append <strong>templateRows</strong> with the <em>className</em> for this iteration trough the loop:<br>
+                                templateRows =<br>
+                                templateRows <br> + table-row-start-tag<br> +  table-data-start-tag<br> +  call the class of <em>className</em><br> +  [number we are processing]<br> +  table-data-close-tag<br> +  table-row-close-tag<br>
+                                <br>
+                                The code is completed once the <strong>table</strong> on the APP page is filled with rows from the string <strong>templateRows</strong>.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -171,6 +242,7 @@
     <!-- Font Awesome JS -->
     <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
     <!-- Prism JS -->
+    <script src="/n-cent-i-vize/app-js/prism.js"></script>
     <script>
         Prism.plugins.NormalizeWhitespace.setDefaults({
             'remove-trailing': true,
@@ -179,8 +251,6 @@
             'right-trim': true
         })
     </script>
-    <!-- Custom JS -->
-    <!-- <script src="js/site.js"></script> -->
 
 </body>
 
