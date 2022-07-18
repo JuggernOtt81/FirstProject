@@ -16,7 +16,7 @@
     <link href="/css/font-awesome-6/webfonts/" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="/css/site.css" rel="stylesheet">
+    <link href="/n-cent-i-vize/app-css/code.css" rel="stylesheet">
     <link href="/css/prism.css" rel="stylesheet">
 
     <!-- Favicon -->
@@ -40,20 +40,16 @@
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <ul class="navbar-nav me-auto mb-2 mb-md-0">
                             <li class="nav-item">
-                                <a class="nav-link" href="/index.html" target="_blank">Link 0</a>
+                                <a class="nav-link" href="/index.html" target="_self">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" target="_parent">Link 1</a>
+                                <a class="nav-link" href="/n-cent-i-vize/challenge.html" target="_self">Challenge</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" target="_self">Link 2</a>
+                                <a class="nav-link" href="/n-cent-i-vize/app.html" target="_self">App</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" target="_top">Link 3</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#" target="_self">N'
-                                    Cent-i-vize</a>
+                                <a class="nav-link active" aria-current="page" href="/n-cent-i-vize/code.html" target="_self">Code</a>
                             </li>
                         </ul>
                         <ul class="navbar-nav ms-auto mb-2 mb-md-0">
@@ -70,10 +66,10 @@
         <!-- ======= START Main Section ======= -->
         <section main>
             <main class="content flex-shrink-0" id="hero">
-                <div class="container py-5 px-5 mt-5">
-                    <h2 class="mt-4 border-1 border-bottom border-dark">The Code</h2>
+                <div class="container py-5 px-5 mt-3">
+                    <h2 class="mt-4 border-1 border-bottom border-dark" style="color:springgreen">The Code</h2>
                     <div class="row row-cols-1 row-cols-lg-2">
-                        <div class="col-lg-8">
+                        <div class="col-lg-7">
                             <pre class="line-numbers">
                                 <code class="language-javascript">
                                     //start or controller function(get the values from the page)
@@ -129,10 +125,10 @@
                                 </code>
                             </pre>
                         </div>
-                        <div class="col-lg-4">
-                            <p style="color:deepskyblue;">The code is structured in three functions:</p>
+                        <div class="col-lg-5">
+                            <h3 style="color:deepskyblue;">The code is structured in three functions:</p>
                             <p></p>
-                            <h4 style="color:wheat;">getValues()</h4>
+                            <h4 style="color:floralwhite;">getValues()</h4>
                             <p style="color:wheat;"><strong>getValues</strong> gets the user input from the page in the form of <strong>strings</strong> by utilizing
                                 <strong>getElementById</strong> to pull the values from the <strong>input</strong> fields.<br>
                                 Then we apply <strong>parseInt</strong> to the strings to get <strong>Integers</strong> to use for our purposes.<br>
@@ -140,7 +136,7 @@
                                 if that is the case. Otherwise, we get an error message telling us to fix the input(s).
                             </p>
 
-                            <h4 style="color:wheat;">generateNumbers()</h4>
+                            <h4 style="color:floralwhite;">generateNumbers()</h4>
                             <p style="color:wheat;"><strong>generateNumbers</strong> takes in two parameters: <strong>startValue</strong> and
                                 <strong>endValue</strong>. We create an array variable called <strong>numbers</strong> to use in a <strong>for</strong> loop.<br>
                                 The array begins at <strong>index[0]</strong> which contains the value of <strong>startValue</strong> which we will take and add 1 to, then will <strong>push</strong> the new number into the next index slot and repeat this process until we reach our <strong>endValue</strong>.<br>
@@ -148,7 +144,7 @@
                             </p>
 
 
-                            <h4 style="color:wheat;">displayNumbers()</h4>
+                            <h4 style="color:floralwhite;">displayNumbers()</h4>
                             <p style="color:wheat;"><strong>displayNumbers</strong> accepts the parameter <strong>numbers</strong> passed to it.<br>
                                 This is the array that holds the values between <strong>startValue</strong> and <strong>endValue</strong>. <br>
                                 We declare an empty string called <strong>templateRows</strong> which will be programmatically injected into the HTML as part of the table.<br>
@@ -158,7 +154,9 @@
                                 Now here's where we append <strong>templateRows</strong> with the <em>className</em> for this iteration trough the loop:<br>
                                 templateRows =<br>
                                 templateRows <br> + table-row-start-tag<br> +  table-data-start-tag<br> +  call the class of <em>className</em><br> +  [number we are processing]<br> +  table-data-close-tag<br> +  table-row-close-tag<br>
-                                <br>
+                            </p>
+
+                            <p style="color:deepskyblue; font-size: large;">
                                 The code is completed once the <strong>table</strong> on the APP page is filled with rows from the string <strong>templateRows</strong>.
                             </p>
                         </div>
