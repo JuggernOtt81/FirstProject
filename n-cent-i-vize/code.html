@@ -67,90 +67,90 @@
         <section main>
             <main class="content flex-shrink-0" id="hero">
                 <div class="container py-5 px-5 mt-3">
-                    <h2 class="mt-4 border-1 border-bottom border-dark" style="color:springgreen">The Code</h2>
+                    <h1 class="mt-4 border-1 border-bottom border-dark" style="color:springgreen">The Code</h1>
                     <div class="row row-cols-1 row-cols-lg-2">
                         <div class="col-lg-7">
-                            <pre class="line-numbers">
-                                <code class="language-javascript">
-                                    //start or controller function(get the values from the page)
-                                    function getValues(){
-                                        //get values from the page
-                                        let startValue = document.getElementById("startValue").value;    
-                                        let endValue = document.getElementById("endValue").value;
+                            <p style="color: springgreen; text-align: center;" class="mt-3">Plain old Javascript</p>
+<pre style="color:#d1d1d1;background:#000000;"><span style="color:#9999a9; ">
+    //start or controller function(get the values from the page)</span>
+    <span style="color:#e66170; font-weight:bold; ">function</span> getValues<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>
+        <span style="color:#9999a9; ">//get values from the page</span>
+        <span style="color:#e66170; font-weight:bold; ">let</span> startValue <span style="color:#d2cd86; ">=</span> document<span style="color:#d2cd86; ">.</span>getElementById<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">startValue</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span>value<span style="color:#b060b0; ">;</span>    
+        <span style="color:#e66170; font-weight:bold; ">let</span> endValue <span style="color:#d2cd86; ">=</span> document<span style="color:#d2cd86; ">.</span>getElementById<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">endValue</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span>value<span style="color:#b060b0; ">;</span>
+    
+        <span style="color:#9999a9; ">//parse into Integers</span>
+        startValue <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">parseInt</span><span style="color:#d2cd86; ">(</span>startValue<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+        endValue <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">parseInt</span><span style="color:#d2cd86; ">(</span>endValue<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>   
+    
+        <span style="color:#e66170; font-weight:bold; ">if</span><span style="color:#d2cd86; ">(</span>Number<span style="color:#d2cd86; ">.</span>isInteger<span style="color:#d2cd86; ">(</span>startValue<span style="color:#d2cd86; ">)</span> <span style="color:#d2cd86; ">&amp;&amp;</span> Number<span style="color:#d2cd86; ">.</span>isInteger<span style="color:#d2cd86; ">(</span>endValue<span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>
+            <span style="color:#9999a9; ">//call generateNumbers()</span>
+            <span style="color:#e66170; font-weight:bold; ">let</span> numbers <span style="color:#d2cd86; ">=</span> generateNumbers<span style="color:#d2cd86; ">(</span>startValue<span style="color:#d2cd86; ">,</span> endValue<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+            <span style="color:#9999a9; ">//call displayNumbers</span>
+            displayNumbers<span style="color:#d2cd86; ">(</span>numbers<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+        <span style="color:#b060b0; ">}</span>
+        <span style="color:#e66170; font-weight:bold; ">else</span><span style="color:#b060b0; ">{</span>
+            <span style="color:#e66170; font-weight:bold; ">alert</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">YOU MUST ENTER INTEGERS!</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+        <span style="color:#b060b0; ">}</span>
+    <span style="color:#b060b0; ">}</span>
+    <span style="color:#9999a9; ">//generate numbers from the start value to the end value</span>
+    <span style="color:#9999a9; ">//logic function(s)</span>
+    <span style="color:#e66170; font-weight:bold; ">function</span> generateNumbers<span style="color:#d2cd86; ">(</span>startValue<span style="color:#d2cd86; ">,</span> endValue<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>
+        <span style="color:#e66170; font-weight:bold; ">let</span> numbers <span style="color:#d2cd86; ">=</span> <span style="color:#d2cd86; ">[</span><span style="color:#d2cd86; ">]</span><span style="color:#b060b0; ">;</span>
+        <span style="color:#e66170; font-weight:bold; ">for</span> <span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">let</span> i <span style="color:#d2cd86; ">=</span> startValue<span style="color:#b060b0; ">;</span> i <span style="color:#d2cd86; ">&lt;=</span> endValue<span style="color:#b060b0; ">;</span> i<span style="color:#d2cd86; ">++</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>
+            <span style="color:#9999a9; ">//this will execute in a loop until i = endValue</span>
+            numbers<span style="color:#d2cd86; ">.</span>push<span style="color:#d2cd86; ">(</span>i<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+        <span style="color:#b060b0; ">}</span>
+        <span style="color:#e66170; font-weight:bold; ">return</span> numbers<span style="color:#b060b0; ">;</span>
+    <span style="color:#b060b0; ">}</span>
+    <span style="color:#9999a9; ">//display the numbers, and mark the EVEN numbers BOLD</span>
+    <span style="color:#9999a9; ">//display or view function(s)</span>
+    <span style="color:#e66170; font-weight:bold; ">function</span> displayNumbers<span style="color:#d2cd86; ">(</span>numbers<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>
+        <span style="color:#e66170; font-weight:bold; ">let</span> templateRows <span style="color:#d2cd86; ">=</span> <span style="color:#02d045; ">"</span><span style="color:#02d045; ">"</span><span style="color:#b060b0; ">;</span>
+        <span style="color:#e66170; font-weight:bold; ">for</span> <span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">let</span> i <span style="color:#d2cd86; ">=</span> <span style="color:#008c00; ">0</span><span style="color:#b060b0; ">;</span> i <span style="color:#d2cd86; ">&lt;</span> numbers<span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">length</span><span style="color:#b060b0; ">;</span> i<span style="color:#d2cd86; ">++</span><span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
+            <span style="color:#e66170; font-weight:bold; ">let</span> number <span style="color:#d2cd86; ">=</span> numbers<span style="color:#d2cd86; ">[</span>i<span style="color:#d2cd86; ">]</span><span style="color:#b060b0; ">;</span>
+            
+            <span style="color:#e66170; font-weight:bold; ">if</span><span style="color:#d2cd86; ">(</span>number <span style="color:#d2cd86; ">%</span> <span style="color:#008c00; ">2</span> <span style="color:#d2cd86; ">==</span> <span style="color:#008c00; ">0</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>
+                className <span style="color:#d2cd86; ">=</span> <span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">even</span><span style="color:#02d045; ">"</span><span style="color:#b060b0; ">;</span>
+            <span style="color:#b060b0; ">}</span><span style="color:#e66170; font-weight:bold; ">else</span>
+            <span style="color:#b060b0; ">{</span>
+                className <span style="color:#d2cd86; ">=</span> <span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">odd</span><span style="color:#02d045; ">"</span><span style="color:#b060b0; ">;</span>
+            <span style="color:#b060b0; ">}</span>
+            templateRows <span style="color:#d2cd86; ">+=</span> <span style="color:#02d045; ">`</span><span style="color:#00c4c4; ">&lt;tr&gt;&lt;td class="</span><span style="color:#02d045; ">${</span><span style="color:#00c4c4; ">className</span><span style="color:#02d045; ">}</span><span style="color:#00c4c4; ">"&gt;</span><span style="color:#02d045; ">${</span><span style="color:#00c4c4; ">number</span><span style="color:#02d045; ">}</span><span style="color:#00c4c4; ">&lt;/td&gt;&lt;/tr&gt;</span><span style="color:#02d045; ">`</span><span style="color:#b060b0; ">;</span>
+        <span style="color:#b060b0; ">}</span>
+        document<span style="color:#d2cd86; ">.</span>getElementById<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">results</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span>innerHTML <span style="color:#d2cd86; ">=</span> templateRows<span style="color:#b060b0; ">;</span>
+    <span style="color:#b060b0; ">}</span>
+    </pre>
+    <p style="color: springgreen; text-align: center;  font-size: xx-small;">This code displays without error thanks to: <a href="https://tohtml.com/jScript/">https://tohtml.com/jScript</a></p>                              
+<div class="border-1 border-bottom border-dark">
 
-                                        //parse into Integers
-                                        startValue = parseInt(startValue);
-                                        endValue = parseInt(endValue);   
-
-                                        if(Number.isInteger(startValue) && Number.isInteger(endValue)){
-                                            //call generateNumbers()
-                                            let numbers = generateNumbers(startValue, endValue);
-                                            //call displayNumbers
-                                            displayNumbers(numbers);
-                                        }
-                                        else{
-                                            alert("YOU MUST ENTER INTEGERS!");
-                                        }
-                                    }
-                                    //generate numbers from the start value to the end value
-                                    //logic function(s)
-                                    function generateNumbers(startValue, endValue){
-                                        let numbers = [];
-                                        for (let i = startValue; i <= endValue; i++){
-                                            //this will execute in a loop until i = endValue
-                                            numbers.push(i);
-                                        }
-                                        return numbers;
-                                    }
-                                    //display the numbers, and mark the EVEN numbers BOLD
-                                    //display or view function(s)
-                                    function displayNumbers(numbers){
-                                        let templateRows = "";
-                                        for (let i = 0; i < numbers.length; i++) {
-                                            let number = numbers[i];
-                                            
-                                            if(number % 2 == 0){
-                                                className = "even";
-                                            }else
-                                            {
-                                                className = "odd";
-                                            }
-                                            //the Prism Library has some limitations when it comes to 
-                                            //Template Literals 
-                                            //(click 'view code' in the footer to see the full code)
-                                            templateRows += `<tr><td class="${className}">${number}</td></tr>`;
-                                        }
-                                        document.getElementById("results").innerHTML = templateRows;
-                                    }
-                                </code>
-                            </pre>
+</div>
                         </div>
                         <div class="col-lg-5">
+                            <p style="color: springgreen; text-align: center;" class="mt-3">An explanation:</p>
                             <h3 style="color:deepskyblue;">The code is structured in three functions:</p>
                             <p></p>
                             <h4 style="color:floralwhite;">getValues()</h4>
                             <p style="color:wheat;"><strong>getValues</strong> gets the user input from the page in the form of <strong>strings</strong> by utilizing
-                                <strong>getElementById</strong> to pull the values from the <strong>input</strong> fields.<br>
-                                Then we apply <strong>parseInt</strong> to the strings to get <strong>Integers</strong> to use for our purposes.<br>
+                                <strong>getElementById</strong> to pull the values from the <strong>input</strong> fields.<br><br>
+                                Then we apply <strong>parseInt</strong> to the strings to get <strong>Integers</strong> to use for our purposes.<br><br>
                                 The <strong>if</strong> statement <strong>validates</strong> that <em>both</em> inputs were indeed Integers and only allows use to proceed 
                                 if that is the case. Otherwise, we get an error message telling us to fix the input(s).
                             </p>
 
                             <h4 style="color:floralwhite;">generateNumbers()</h4>
                             <p style="color:wheat;"><strong>generateNumbers</strong> takes in two parameters: <strong>startValue</strong> and
-                                <strong>endValue</strong>. We create an array variable called <strong>numbers</strong> to use in a <strong>for</strong> loop.<br>
-                                The array begins at <strong>index[0]</strong> which contains the value of <strong>startValue</strong> which we will take and add 1 to, then will <strong>push</strong> the new number into the next index slot and repeat this process until we reach our <strong>endValue</strong>.<br>
+                                <strong>endValue</strong>.<br><br> We create an array variable called <strong>numbers</strong> to use in a <strong>for</strong> loop.<br><br>
+                                The array begins at <strong>index[0]</strong> which contains the value of <strong>startValue</strong> which we will take and add 1 to, then will <strong>push</strong> the new number into the next index slot and repeat this process until we reach our <strong>endValue</strong>.<br><br>
                                 Then we will <strong>return</strong> (send back out to the parent program) the newest version of <strong>numbers</strong> containing each Integer we processed.
                             </p>
 
 
                             <h4 style="color:floralwhite;">displayNumbers()</h4>
                             <p style="color:wheat;"><strong>displayNumbers</strong> accepts the parameter <strong>numbers</strong> passed to it.<br>
-                                This is the array that holds the values between <strong>startValue</strong> and <strong>endValue</strong>. <br>
+                                This is the array that holds the values between <strong>startValue</strong> and <strong>endValue</strong>. <br><br>
                                 We declare an empty string called <strong>templateRows</strong> which will be programmatically injected into the HTML as part of the table.<br>
-                                The upcoming <strong>for</strong> loop will append a new value to <strong>templateRows</strong> based on whether the integer it is analyzing has a remainder when divided by 2.<br>
-                                If there is a remainder, then the number was <strong>odd</strong> and so we will assign "odd" to the string <em>className()</em><br>
-                                Alternatively, if there is no remainder, then 2 divides evenly into the Integer of the moment and must be even, and in that case, <em>className</em> will be assigned "even".<br>
+                                The upcoming <strong>for</strong> loop will append a new value to <strong>templateRows</strong> based on whether the integer it is analyzing has a remainder when divided by 2.<br><br>
+                                If there is no remainder, then 2 divides evenly into the Integer of the moment and must be even, and in that case, <em>className</em> will be assigned "even"; <em>alternatively</em>, if there is a remainder, then the number was <strong>odd</strong> and so we will assign "odd" to the string <em>className()</em><br><br>
                                 Now here's where we append <strong>templateRows</strong> with the <em>className</em> for this iteration trough the loop:<br>
                                 templateRows =<br>
                                 templateRows <br> + table-row-start-tag<br> +  table-data-start-tag<br> +  call the class of <em>className</em><br> +  [number we are processing]<br> +  table-data-close-tag<br> +  table-row-close-tag<br>
@@ -241,15 +241,15 @@
     <!-- Font Awesome JS -->
     <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
     <!-- Prism JS -->
-    <script src="/n-cent-i-vize/app-js/prism.js"></script>
-    <script>
+    <!-- <script src="/n-cent-i-vize/app-js/prism.js"></script> -->
+<!--     <script>
         Prism.plugins.NormalizeWhitespace.setDefaults({
             'remove-trailing': true,
             'remove-indent': true,
             'left-trim': true,
             'right-trim': true
         })
-    </script>
+    </script> -->
 
 </body>
 
