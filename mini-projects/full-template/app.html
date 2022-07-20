@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>CHALLENGE: N' Cent-i-vize</title>
+    <title>APP: Full-Template</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,6 +17,9 @@
 
     <!-- Custom CSS -->
     <link href="/css/site.css" rel="stylesheet">
+
+    <!-- Page Specific CSS -->
+    <link href="/mini-projects/full-template/app-css/app.css" rel="stylesheet">
 
     <!-- Favicon -->
     <link href="/img/favicon.png" type="image/png" rel="icon">
@@ -41,13 +44,13 @@
                                 <a class="nav-link" href="/index.html" target="_self">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/n-cent-i-vize/challenge.html" target="_self">Challenge</a>
+                                <a class="nav-link" href="/mini-projects/full-template/challenge.html" target="_self">Challenge</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/n-cent-i-vize/app.html" target="_self">App</a>
+                                <a class="nav-link active" aria-current="page" href="/mini-projects/full-template/app.html" target="_self">App</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/n-cent-i-vize/code.html" target="_self">Code</a>
+                                <a class="nav-link" href="/mini-projects/full-template/code.html" target="_self">Code</a>
                             </li>
                         </ul>
                         <ul class="navbar-nav ms-auto mb-2 mb-md-0">
@@ -63,56 +66,41 @@
         <!-- ======= END Nav Section ======= -->
         <!-- ======= START Main Section ======= -->
         <section main>
-            <main class="" id="hero">
-                <div class="container col-xxl-8 px-4 py-5">
-                    <div class="row g-y py-5 row-cols-1 row-cols-lg-2">
-                        <div class="col order-last order-lg-first description">
-                            <!-- app name -->
-                            <h1 class="display-5 fw-bold 1h-1 mb-3 d-title"><strong>N' Cent-i-vize:</strong><br><span
-                                    class="d-t-span">A Coding Challenge</span></h1>
-                            <h4 style="font-variant:small-caps" class="d-brief"><strong>A javascript coding exercise
-                                    using loops.</strong></h4>
-                            <p class="d-paragraph"> Write a program that displays the numbers (<b>"N"</b>) from 0 to
-                                100 (<b>CENT</b>igrades), displaying the EVEN numbers in <strong>BOLD</strong> typeface.
+            <main id="hero">                
+                <div class="container py-5 mt-5">
+                    <div class="row row-cols-1 row-cols-lg-2">
+                        <div class="col col-lg-4 border-2 border-end">
+                            <h1 class="fw-bold lh-1 mb-3">'full-template': A Coding Challenge</h1>
+                            <h4 class="lead">blurb about hat this app does
+                            <h2 class="mt-5 border-bottom border-2">Instructions</h2>
+                            <p style="color:ghostwhite;">Instructions for the user.
                             </p>
-                            <ul class="fa-ul pt-2 checklist">
-                                <li><span class="fa-li"><i class="fas fa-check-square"></i></span>HTML</li>
-                                <li><span class="fa-li"><i class="fas fa-check-square"></i></span>CSS</li>
-                                <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Bootstrap Layout</li>
-                                <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Javascript
-                                    Fundamentals</li>
-                                <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Javascript Loops</li>
-                                <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Javascript Functions
-                                </li>
-                                <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Javascript Dom
-                                    Manipulation</li>
-                                <li><span class="fa-li"><i class="fas fa-check-square"></i></span>If/Then/Else</li>
-                                <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Boolean Logic</li>
-                                <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Operators</li>
-                            </ul>
-                            <div>
-                                <a type="button" class="btn btn-outline-light btn-lg px-4 me-md-2" href="app.html">TRY
-                                    IT NOW!</a>
+                        </div>                            
+                        <div class="col col-lg-8">
+                            <h5>Enter Values</h5>
+                            <div class="row gy-2">
+                                <div class="col">
+                                    <p style="color:ghostwhite;">Maybe some part of the program here</p>
+                                </div>
+                                <div class="col">
+                                    <p style="color:ghostwhite;">Mayber another part of the program here</p>
+                                </div>
+                                <div class="col-12 d-flex justify-content-end">
+                                    <button id="btnSubmit" class="btn btn-primary btn-lg" control-id="ControlID-3">Process</button>
+                                </div>
                             </div>
-                            <h5 class="fw-bold mt-5 tech-used">
-                                <div class="d-flex">
-                                    <div class="row">
-                                        <div class="col"><a href="https://www.ecma-international.org/technical-committees/tc39/" target="_blank"><i class="fab fa-js-square fa-5 icon-js"></i></a></div>
-                                        <div class="col"><a href="https://getbootstrap.com/docs/4.1/getting-started/introduction/" target="_blank"><i class="fab fa-bootstrap fa-5 icon-bs"></i></a></div>
-                                        <div class="col"><a href="https://html.spec.whatwg.org/multipage/"><i class="fab fa-html5 fa-5 icon-html5" target="_blank"></i></div></a>
-                                        <div class="col"><a href="https://www.w3.org/TR/CSS/#css"><i class="fab fa-css3-alt fa-5 icon-css3" target="_blank"></i></a></div>
+                            <div class="row">
+                                <div class="col">
+                                    <h2 class="mt-5 border-bottom border-2">Results</h2>
+                                    <div>
+                                        <p style="color:ghostwhite;">the results of the program</p>
                                     </div>
                                 </div>
-                            </h5>
-
-                        </div>
-                        <div class="col">
-                            <!-- logo -->
-                            <img src="/n-cent-i-vize/img/100.jpg" class="img-fluid center-block d-block mx-auto"
-                                alt="App Logo" max-width="700" max-height="500">
+                            </div>                                                   
                         </div>
                     </div>
-                </div>
+                    </div>
+                </div>                               
             </main>
         </section>
         <!-- ======= END Main Section ======= -->
@@ -174,7 +162,7 @@
                 </div>
                 <div class="col-3 justify-content-end">
                     <span class="footerspan">
-                        <a class="footerlink" href="https://github.com/JuggernOtt81/Showcase/blob/main/n-cent-i-vize/challenge.html"
+                        <a class="footerlink" href="https://github.com/JuggernOtt81/Showcase/blob/main/full-template/app.html"
                             target="_blank">view code</a></span>
                 </div>
             </div>
@@ -192,7 +180,12 @@
     <!-- Font Awesome JS -->
     <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
     <!-- Custom JS -->
-    <!-- <script src="js/site.js"></script> -->
+    <script src="/js/site.js"></script>
+    <!-- Page Specific JS -->
+    <script src="/full-template/app-js/app.js"></script>
+    <script>
+        document.getElementById("btnSubmit").addEventListener("click", getValues);
+    </script>
 </body>
 
 </html>
