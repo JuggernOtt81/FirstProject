@@ -45,5 +45,9 @@ function displayNumbers(numbers){
     }
     document.getElementById("results").innerHTML = templateRows;
 }
+function resetTable(){
+    let templateRows = "";
+    document.getElementById("results").innerHTML = templateRows;
+}
 
 //
