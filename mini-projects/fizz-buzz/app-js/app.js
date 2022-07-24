@@ -63,8 +63,3 @@ function resetTable() {
   document.getElementById("results").innerHTML = templateRows;
 }
 //
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
