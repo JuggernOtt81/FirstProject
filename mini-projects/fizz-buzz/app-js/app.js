@@ -69,5 +69,9 @@ function displayData(fbArray) {
 function resetTable() {
   let templateRows = "";
   document.getElementById("results").innerHTML = templateRows;
+<<<<<<< HEAD
 }
 //
+=======
+}
+>>>>>>> 233f0574528850d9aa19a39685d5654f62810247
