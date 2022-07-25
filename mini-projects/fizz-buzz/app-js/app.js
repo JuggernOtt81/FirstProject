@@ -62,4 +62,3 @@ function resetTable() {
   let templateRows = "";
   document.getElementById("results").innerHTML = templateRows;
 }
-//
