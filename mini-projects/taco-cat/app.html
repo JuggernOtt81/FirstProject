@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Showcase: HOME</title>
+    <title>APP: Taco-Cat</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,7 +16,10 @@
     <link href="/css/font-awesome-6/webfonts/" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="/css/site.css" rel="stylesheet">
+    <link href="/mini-projects/taco-cat/app-css/app.css" rel="stylesheet">
+
+    <!-- Page Specific CSS -->
+    <link href="/mini-projects/taco-cat/app-css/app.css" rel="stylesheet">
 
     <!-- Favicon -->
     <link href="/img/favicon.png" type="image/png" rel="icon">
@@ -38,17 +41,17 @@
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <ul class="navbar-nav me-auto mb-2 mb-md-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/index.html" target="_self">Home</a>
-                            </li>
-<!--                             <li class="nav-item">
-                                <a class="nav-link" href="#" target="_self">Link A</a>
+                                <a class="nav-link" href="/index.html" target="_self">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" target="_self">Link B</a>
+                                <a class="nav-link" href="/mini-projects/taco-cat/challenge.html" target="_self">Challenge</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" target="_self">Link C</a>
-                            </li> -->
+                                <a class="nav-link active" aria-current="page" href="/mini-projects/taco-cat/app.html" target="_self">App</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/mini-projects/taco-cat/code.html" target="_self">Code</a>
+                            </li>
                         </ul>
                         <ul class="navbar-nav ms-auto mb-2 mb-md-0">
                             <li class="nav-item">
@@ -63,37 +66,41 @@
         <!-- ======= END Nav Section ======= -->
         <!-- ======= START Main Section ======= -->
         <section main>
-            <main class="" id="hero">
-                <div class="container col-xxl-8 px-4 py-5">
-                    <div class="row g-y py-5 row-cols-1 row-cols-lg-2">
-                        <div class="col order-last order-lg-first description">
-                            <!-- app name -->
-                            <h1 class="display-5 fw-bold 1h-1 mb-3 d-title"><strong>List of Apps:</strong></h1>
-                            <h4 style="font-variant:small-caps" class="d-brief"><strong>Some of the things I've made.</strong></h4>
-                            <p class="d-paragraph"> This is a paragraph about making numerous apps.
+            <main id="hero">                
+                <div class="container py-5 mt-5">
+                    <div class="row row-cols-1 row-cols-lg-2">
+                        <div class="col col-lg-4 border-2 border-end">
+                            <h1 class="fw-bold lh-1 mb-3">TACO CAT:</h1><h4>A Coding Challenge</h4>
+                            <h4 class="lead">blurb about hat this app does
+                            <h2 class="mt-5 border-bottom border-2">Instructions</h2>
+                            <p style="color:ghostwhite;">Instructions for the user.
                             </p>
-                            <ul class="fa-ul pt-2 checklist">
-                                <li><a href="/mini-projects/rewind/challenge.html"><span class="fa-li"><i class="fas fa-check-square"></i></span><strong>Rewind</strong></a> - <b>Out Now!</b></li>                                
-                                <li><a href="#"><span class="fa-li"><i class="fas fa-chain-broken"></i></span><strong>Dummy</strong></a> - The Reboot - <i>coming soon</i></li>
-                                <li><a href="/mini-projects/taco-cat/challenge.html"><span class="fa-li"><i class="fas fa-chain-broken"></i></span><strong>Taco Cat</strong></a> - The Reboot - <i>Preview</i></li>
-                                <li><a href="/mini-projects/fizz-buzz/challenge.html"><span class="fa-li"><i class="fas fa-check-square"></i></span><strong>Fizz Buzz</strong></a> - <b>Out Now!</b></li>                                
-                                <li><a href="#"><span class="fa-li"><i class="fas fa-chain-broken"></i></span><strong>Numbers</strong></a> - The Reboot - <i>coming soon</i></li>
-                                <li><a href="#"><span class="fa-li"><i class="fas fa-chain-broken"></i></span><strong>Sunset Hills</strong></a> - The Reboot - <i>coming soon</i></li>
-                                <li><a href="/mini-projects/n-cent-i-vize/challenge.html"><span class="fa-li"><i class="fas fa-check-square"></i></span><strong>N' Cent-i-vize</strong></a> - <b>Out Now!</b></li>
-                                <li><a href="#"><span class="fa-li"><i class="fas fa-chain-broken"></i></span><strong>Sum of All Fears</strong></a> - The Reboot - <i>coming soon</i></li>
-                            </ul>
-                            <div>
-                                <a type="button" class="btn btn-outline-light btn-lg px-4 me-md-2" href="app.html">A BUTTON</a>
+                        </div>                            
+                        <div class="col col-lg-8">
+                            <h5>Enter Values</h5>
+                            <div class="row gy-2">
+                                <div class="col">
+                                    <p style="color:ghostwhite;">Maybe some part of the program here</p>
+                                </div>
+                                <div class="col">
+                                    <p style="color:ghostwhite;">Maybe another part of the program here</p>
+                                </div>
+                                <div class="col-12 d-flex justify-content-end">
+                                    <button id="btnSubmit" class="btn btn-primary btn-lg" control-id="ControlID-3">Process</button>
+                                </div>
                             </div>
-                            <!-- may have the full tech stack here at some point -->
-                        </div>
-                        <div class="col">
-                            <!-- logo -->
-                            <img src="/img/Infinity-loop - PNG.png" class="img-fluid center-block d-block mx-auto"
-                                alt="App Logo" max-width="700" max-height="500">
+                            <div class="row">
+                                <div class="col">
+                                    <h2 class="mt-5 border-bottom border-2">Results</h2>
+                                    <div>
+                                        <p style="color:ghostwhite;">the results of the program</p>
+                                    </div>
+                                </div>
+                            </div>                                                   
                         </div>
                     </div>
-                </div>
+                    </div>
+                </div>                               
             </main>
         </section>
         <!-- ======= END Main Section ======= -->
@@ -155,7 +162,7 @@
                 </div>
                 <div class="col-3 justify-content-end">
                     <span class="footerspan">
-                        <a class="footerlink" href="https://github.com/JuggernOtt81/Showcase/blob/main/index.html"
+                        <a class="footerlink" href="https://github.com/JuggernOtt81/Showcase/blob/main/mini-projects/taco-cat/app.html"
                             target="_blank">view code</a></span>
                 </div>
             </div>
@@ -173,7 +180,12 @@
     <!-- Font Awesome JS -->
     <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
     <!-- Custom JS -->
-    <script src="js/site.js"></script>
+    <script src="/js/site.js"></script>
+    <!-- Page Specific JS -->
+    <script src="/mini-projects/taco-cat/app-js/app.js"></script>
+    <script>
+        document.getElementById("btnSubmit").addEventListener("click", getValues);
+    </script>
 </body>
 
 </html>
