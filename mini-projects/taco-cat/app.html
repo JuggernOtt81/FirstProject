@@ -71,36 +71,31 @@
                     <div class="row row-cols-1 row-cols-lg-2">
                         <div class="col col-lg-4 border-2 border-end">
                             <h1 class="fw-bold lh-1 mb-3">TACO CAT:</h1><h4>A Coding Challenge</h4>
-                            <h4 class="lead">blurb about hat this app does
+                            <h4 class="lead">An exercise expanding on <a href="/mini-projects/rewind/challenge.html">REWIND</a> to determine whther a given string is a palindrome or not.
                             <h2 class="mt-5 border-bottom border-2">Instructions</h2>
-                            <p style="color:ghostwhite;">Instructions for the user.
-                            </p>
+                            <p style="color:ghostwhite;">1 - Enter a string into the text field.<br>
+                                2 - Press the <span class="btn-primary" style="padding-left: 3px; padding-right: 3px; border-radius: 3%;">Process</span> button.</p>
                         </div>                            
                         <div class="col col-lg-8">
-                            <h5>Enter Values</h5>
-                            <div class="row gy-2">
+                            <h5>Enter A String To Reverse</h5>
+                            <form class="row gy-2">
                                 <div class="col">
-                                    <p style="color:ghostwhite;">Maybe some part of the program here</p>
+                                    <input type="text" class="form-control" id="userString" placeholder="Type Here" aria-label="Type Here">
+                                </div>                            
+                                <div class="col-12">
+                                    <button type="button" id="btnSubmit" class="btn btn-primary btn-lg"">Process</button>
                                 </div>
-                                <div class="col">
-                                    <p style="color:ghostwhite;">Maybe another part of the program here</p>
+                                <div class="alert alert-success mt-5 invisible fade show" id="alert" role="alert">
+                                    <h4 class="alert-heading">RESULT:</h4>
+                                    <hr>
+                                    <p style="color:black;" class="mb-0" id="msg">
+                                        <!-- insert message here -->
+                                    </p>
                                 </div>
-                                <div class="col-12 d-flex justify-content-end">
-                                    <button id="btnSubmit" class="btn btn-primary btn-lg" control-id="ControlID-3">Process</button>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <h2 class="mt-5 border-bottom border-2">Results</h2>
-                                    <div>
-                                        <p style="color:ghostwhite;">the results of the program</p>
-                                    </div>
-                                </div>
-                            </div>                                                   
-                        </div>
+                            </form>                        
+                        </div>                                                   
                     </div>
-                    </div>
-                </div>                               
+                </div>
             </main>
         </section>
         <!-- ======= END Main Section ======= -->
@@ -184,7 +179,7 @@
     <!-- Page Specific JS -->
     <script src="/mini-projects/taco-cat/app-js/app.js"></script>
     <script>
-        document.getElementById("btnSubmit").addEventListener("click", getValues);
+        document.getElementById("btnSubmit").addEventListener("click", palindrome);
     </script>
 </body>
 
