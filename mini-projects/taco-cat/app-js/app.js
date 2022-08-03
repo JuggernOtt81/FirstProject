@@ -7,7 +7,11 @@ function palindrome() {
         palindromeString = `<i class="fas fa-check" style="color: green; font-size="larger;"></i>   ${reverseString()} IS a palindrome of ${getValues()}   <i class="fas fa-check" style="color: green; font-size="larger;"></i>`;
     }
     else {
-        palindromeString = `<i class="fa-solid fa-x" style="color: red; font-size="larger;></i>   ${reverseString()} is NOT a palindrome of ${getValues()}   <i class="fa-solid fa-x" style="color: red; font-size="larger;></i>`;
+        palindromeString = `<i class="fa-solid fa-x" style="color: red; font-size="larger;></i>   ${
+            reverseString()
+        } is NOT a palindrome of ${
+                getValues()
+            }   <i class="fa-solid fa-x" style="color: red; font-size="larger;></i>`;
     };
     displayString(palindromeString);
 }
@@ -16,7 +20,7 @@ function palindrome() {
 function getValues() {
     document.getElementById("alert").classList.add("invisible");
     let userString = document.getElementById("userString").value.toLowerCase();
-    let regex = /[^a-z0-9/]/gi;
+    let regex = /[^a-z0-9]/gi;
     userString = userString.replace(regex, ``);
     return userString;
 }
