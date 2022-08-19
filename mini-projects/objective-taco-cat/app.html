@@ -74,7 +74,7 @@
                     <div class="row row-cols-1 row-cols-lg-2">
                         <div class="col col-lg-4 border-2 border-end">
                             <h1 class="fw-bold lh-1 mb-3">TACO CAT <span style="font-variant:small-caps; color:chartreuse;">objective</span>:</h1><h4>A Coding Challenge</h4>
-                            <h4 class="lead">An exercise based on <a href="/mini-projects/taco-cat/challenge.html"><strong>TACO CAT</strong></a> <span style="font-variant:small-caps; color: royalblue;">(original)</span> to give the same palindrome checking funcitonality, but based on using objects in the code.
+                            <h4 class="lead">An exercise based on <a href="/mini-projects/taco-cat/challenge.html"><strong>TACO CAT</strong></a> <span style="font-variant:small-caps; color: royalblue;">(original)</span> to give the same palindrome checking functionality,  <strong>But this time, use an OBJECT and its properties</strong>.
                             <h2 class="mt-5 border-bottom border-2">Instructions</h2>
                             <p style="color:black;">1 - Enter a string into the text field.<br>
                                 2 - Press the <span class="btn-primary" style="padding-left: 3px; padding-right: 3px; border-radius: 3%;">Process</span> button.</p>
@@ -89,7 +89,7 @@
                                     <button type="button" id="btnSubmit" class="btn btn-primary btn-lg"">Process</button>
                                 </div>
                                 <div class="alert alert-success mt-5 invisible fade show" id="alert" role="alert">
-                                    <h4 class="alert-heading">RESULT:</h4>
+                                    <h4 id="alertHeader" class="alert-heading">RESULT:</h4>
                                     <hr>
                                     <p style="color:black;" class="mb-0" id="msg">
                                         <!-- insert message here -->
@@ -182,7 +182,7 @@
     <!-- Page Specific JS -->
     <script src="/mini-projects/objective-taco-cat/app-js/app.js"></script>
     <script>
-        document.getElementById("btnSubmit").addEventListener("click", palindrome);
+        document.getElementById("btnSubmit").addEventListener("click", getValues);
     </script>
 </body>
 

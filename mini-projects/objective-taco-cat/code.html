@@ -72,25 +72,128 @@
                     <h1 class="mt-4 border-1 border-bottom border-dark" style="color:darkred">The Code</h1>
                     <div class="row row-cols-1 row-cols-lg-2">
                         <div class="col-lg-7">
-                            <p style="color: darkred; text-align: center;" class="mt-3">Programming Language Used</p>
-<pre style="color:#d1d1d1;background:#000000;"><span style="color:#9999a9; ">
-    //the code goes here!
+                            <p style="color: darkred; text-align: center;" class="mt-3">Plain Old JavaScript</p>
 
-</pre>
+    
+
+    <pre style="color:#d1d1d1;background:#000000;">
+        
+    <span style="color:#e66170; font-weight:bold; ">function</span> getValues<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>
+        <span style="color:#e66170; font-weight:bold; ">let</span> userString <span style="color:#d2cd86; ">=</span> document<span style="color:#d2cd86; ">.</span>getElementById<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">userString</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span>value<span style="color:#b060b0; ">;</span>
+    
+        <span style="color:#9999a9; ">//check palindrome</span>
+        <span style="color:#e66170; font-weight:bold; ">let</span> returnObject <span style="color:#d2cd86; ">=</span> checkForPalindrome<span style="color:#d2cd86; ">(</span>userString<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+    
+        <span style="color:#9999a9; ">//display message</span>
+        displayMessage<span style="color:#d2cd86; ">(</span>returnObject<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+    <span style="color:#b060b0; ">}</span>
+    
+    <span style="color:#e66170; font-weight:bold; ">function</span> checkForPalindrome<span style="color:#d2cd86; ">(</span>userString<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>    
+        userString <span style="color:#d2cd86; ">=</span> userString<span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">toLowerCase</span><span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+    
+        <span style="color:#e66170; font-weight:bold; ">let</span> regex <span style="color:#d2cd86; ">=</span><span style="color:#00c4c4; "> </span><span style="color:#02d045; ">/</span><span style="color:#d2cd86; ">[</span><span style="color:#d2cd86; ">^</span><span style="color:#00c4c4; ">a</span><span style="color:#d2cd86; ">-</span><span style="color:#00c4c4; ">z0</span><span style="color:#d2cd86; ">-</span><span style="color:#00c4c4; ">9</span><span style="color:#d2cd86; ">]</span><span style="color:#02d045; ">/</span><span style="color:#e66170; font-weight:bold; ">gi</span><span style="color:#b060b0; ">;</span>
+    
+        userString <span style="color:#d2cd86; ">=</span> userString<span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">replace</span><span style="color:#d2cd86; ">(</span>regex<span style="color:#d2cd86; ">,</span><span style="color:#02d045; ">"</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+    
+        <span style="color:#e66170; font-weight:bold; ">let</span> revString <span style="color:#d2cd86; ">=</span> <span style="color:#d2cd86; ">[</span><span style="color:#d2cd86; ">]</span><span style="color:#b060b0; ">;</span>
+        <span style="color:#e66170; font-weight:bold; ">let</span> returnObject <span style="color:#d2cd86; ">=</span> <span style="color:#b060b0; ">{</span><span style="color:#b060b0; ">}</span><span style="color:#b060b0; ">;</span>
+    
+        <span style="color:#e66170; font-weight:bold; ">for</span> <span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">let</span> i <span style="color:#d2cd86; ">=</span> userString<span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">length</span> <span style="color:#d2cd86; ">-</span><span style="color:#008c00; ">1</span><span style="color:#b060b0; ">;</span> i <span style="color:#d2cd86; ">&gt;=</span> <span style="color:#008c00; ">0</span><span style="color:#b060b0; ">;</span> i<span style="color:#d2cd86; ">--</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>
+            revString <span style="color:#d2cd86; ">+=</span> userString<span style="color:#d2cd86; ">[</span>i<span style="color:#d2cd86; ">]</span><span style="color:#b060b0; ">;</span>
+        <span style="color:#b060b0; ">}</span>
+    
+        <span style="color:#e66170; font-weight:bold; ">if</span> <span style="color:#d2cd86; ">(</span>revString <span style="color:#d2cd86; ">==</span> userString<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>
+            <span style="color:#e66170; font-weight:bold; ">let</span> check <span style="color:#d2cd86; ">=</span> 
+            <span style="color:#02d045; ">`</span><span style="color:#00c4c4; ">&lt;i class="fas fa-check" style="color: green; font-size="larger;"&gt;&lt;/i&gt;</span><span style="color:#02d045; ">`</span><span style="color:#b060b0; ">;</span>
+            returnObject<span style="color:#d2cd86; ">.</span>header <span style="color:#d2cd86; ">=</span> <span style="color:#02d045; ">`</span><span style="color:#02d045; ">${</span><span style="color:#00c4c4; ">check</span><span style="color:#02d045; ">}</span><span style="color:#00c4c4; ">     PALINDROME DETECTED!     </span><span style="color:#02d045; ">${</span><span style="color:#00c4c4; ">check</span><span style="color:#02d045; ">}</span><span style="color:#02d045; ">`</span><span style="color:#b060b0; ">;</span>
+            returnObject<span style="color:#d2cd86; ">.</span>msg <span style="color:#d2cd86; ">=</span> <span style="color:#02d045; ">`</span><span style="color:#00c4c4; "> IS a palindrome of </span><span style="color:#02d045; ">`</span>
+    
+        <span style="color:#b060b0; ">}</span>
+        <span style="color:#e66170; font-weight:bold; ">else</span><span style="color:#b060b0; ">{</span>
+            <span style="color:#e66170; font-weight:bold; ">let</span> xMark <span style="color:#d2cd86; ">=</span> 
+            <span style="color:#02d045; ">`</span><span style="color:#00c4c4; ">&lt;i class="fa-solid fa-x" style="color: red; font-size="larger;&gt;&lt;/i&gt;</span><span style="color:#02d045; ">`</span><span style="color:#b060b0; ">;</span>
+            returnObject<span style="color:#d2cd86; ">.</span>header <span style="color:#d2cd86; ">=</span> <span style="color:#02d045; ">`</span><span style="color:#02d045; ">${</span><span style="color:#00c4c4; ">xMark</span><span style="color:#02d045; ">}</span><span style="color:#00c4c4; ">     no palindrome found     </span><span style="color:#02d045; ">${</span><span style="color:#00c4c4; ">xMark</span><span style="color:#02d045; ">}</span><span style="color:#02d045; ">`</span><span style="color:#b060b0; ">;</span>
+            returnObject<span style="color:#d2cd86; ">.</span>msg <span style="color:#d2cd86; ">=</span> <span style="color:#02d045; ">`</span><span style="color:#00c4c4; "> is NOT palindrome of </span><span style="color:#02d045; ">`</span>
+        <span style="color:#b060b0; ">}</span>
+    
+        returnObject<span style="color:#d2cd86; ">.</span>original <span style="color:#d2cd86; ">=</span> userString<span style="color:#b060b0; ">;</span>
+        returnObject<span style="color:#d2cd86; ">.</span>reversed <span style="color:#d2cd86; ">=</span> revString<span style="color:#b060b0; ">;</span>
+    
+        <span style="color:#e66170; font-weight:bold; ">return</span> returnObject<span style="color:#b060b0; ">;</span>
+    <span style="color:#b060b0; ">}</span>
+    
+    <span style="color:#e66170; font-weight:bold; ">function</span> displayMessage<span style="color:#d2cd86; ">(</span>returnObject<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>
+        document<span style="color:#d2cd86; ">.</span>getElementById<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">alertHeader</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span>innerHTML <span style="color:#d2cd86; ">=</span> returnObject<span style="color:#d2cd86; ">.</span>header<span style="color:#b060b0; ">;</span>
+        document<span style="color:#d2cd86; ">.</span>getElementById<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">msg</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span>innerHTML <span style="color:#d2cd86; ">=</span> 
+        <span style="color:#02d045; ">`</span><span style="color:#00c4c4; ">&lt;strong&gt;</span><span style="color:#02d045; ">${</span><span style="color:#00c4c4; ">returnObject</span><span style="color:#d2cd86; ">.</span><span style="color:#00c4c4; ">reversed</span><span style="color:#02d045; ">}</span><span style="color:#00c4c4; ">&lt;/strong&gt;</span>
+    <span style="color:#00c4c4; ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#02d045; ">${</span><span style="color:#00c4c4; ">returnObject</span><span style="color:#d2cd86; ">.</span><span style="color:#00c4c4; ">msg</span><span style="color:#02d045; ">}</span><span style="color:#00c4c4; "> </span>
+    <span style="color:#00c4c4; ">&nbsp;&nbsp;&nbsp;&nbsp;&lt;strong&gt;</span><span style="color:#02d045; ">${</span><span style="color:#00c4c4; ">returnObject</span><span style="color:#d2cd86; ">.</span><span style="color:#00c4c4; ">original</span><span style="color:#02d045; ">}</span><span style="color:#00c4c4; ">&lt;/strong&gt;</span><span style="color:#02d045; ">`</span><span style="color:#b060b0; ">;</span>
+        document<span style="color:#d2cd86; ">.</span>getElementById<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">alert</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span>classList<span style="color:#d2cd86; ">.</span>remove<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">invisible</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+    <span style="color:#b060b0; ">}</span>
+    </pre>
+                            
+
+                            
                                 
     
     
-    <p style="color: darkred; text-align: center;  font-size: small;">This code displays without error thanks to: <a href="https://tohtml.com"  class="nav-link" style="color:chartreuse" target="_blank">https://tohtml.com</a></p>                              
+    <p style="color: darkred; text-align: center;  font-size: small;">This code displays without error thanks to: <a href="https://tohtml.com"  class="nav-link" style="color:chartreuse" target="_blank">https://tohtml.com</a></p>
 <div class="border-1 border-bottom border-dark">
 
 </div>
                         </div>
                         <div class="col-lg-5">
                             <p style="color: darkred; text-align: center;" class="mt-3">An explanation:</p>
-                            <h3 style="color:darkblue;">The code is structured __________:</p>
+                            <h3 style="color:darkblue;">The code is structured into 3 functions:</p>
                             <p></p>
-                            <h4 style="color:darkslategray;">someFunction()</h4>
-                            <p style="color:darkmagenta;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin eros non diam pharetra, blandit mollis sem euismod. Ut eu finibus urna. Duis ac auctor elit. </p>
+                            <h4 style="color:darkslategray;">getValues()</h4>
+                            <p style="color:darkmagenta;">This function initializes the program using 3 statements:
+                                <ol>
+                                    <li>grab the user's input from the page</li>
+                                    <li>create the object we'll be using in the code</li>
+                                    <li>call the display message when it is time</li>
+                                </ol>
+                            </p>
+
+                            <h4 style="color:darkslategray;">checkForPalindrome()</h4>
+                            <p style="color:darkmagenta;">The algorithm:
+                                <ol>
+                                    <li>set userString to Lower Case characters</li>
+                                    <li>set a regex (regular expressions) string</li>
+                                    <li>set userString to omit unwanted characters</li>
+                                    <li>intialize an array: revString</li>
+                                    <li>initialize an object to be returned: returnObject</li>
+                                    <li>decrementally iterate through the userString</li>
+                                    <ol style="list-style-type:lower-roman;">
+                                        <li>quasi append [i] to revString</li>
+                                    </ol>
+                                    <li>if statement:</li>
+                                    <ol style="list-style-type:lower-roman;">
+                                        <li>if palindrome, set strings on object one way</li>
+                                        <li>if not, set strings on object another way</li>
+                                    </ol>
+                                    <li>set userString and revString to be properties of returnObject</li>
+                                    <li>return the returnObject for use in another function</li>
+                                </ol>
+                                <span style="color:darkmagenta;"></span>
+                            </p>
+
+                            <h4 style="color:darkslategray;">displayMessage()</h4>
+                            <p style="color:darkmagenta;">This function uses 3 statements to get the output on the page:
+                                <ol>
+                                    <li>pass data to the page for the alert header</li>
+                                    <ol style="list-style-type:lower-roman;">
+                                        <li>alertHeader is set with value from returnObject: check or x-mark</li>
+                                    </ol>
+                                    <li>pass data to the page for the alert message</li>
+                                    <ol style="list-style-type:lower-roman;">
+                                        <li>msg is set 'returnObject.reversed' + 'returnObject.msg' + 'returnObject.original'</li>
+                                        <li>programmatically sets "IS" or "is NOT" to the alert message and sticks it between the original and reversed sets of characters</li>
+                                    </ol>
+                                    <li>reveal the alert</li>
+                                </ol>
+                                <span style="color:darkmagenta;"></span>
+                            </p>
 
                             <div class="border-1 border-bottom border-dark">
 
