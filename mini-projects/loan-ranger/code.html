@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>CODE: Loan-Ranger</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <!-- Font Awesome CSS -->
+    <link href="/css/font-awesome-6/css/all.css" rel="stylesheet">
+    <link href="/css/font-awesome-6/webfonts/" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/mini-projects/loan-ranger/app-css/code.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link href="/img/favicon.png" type="image/png" rel="icon">
+</head>
+
+<body class="common-bg">
+    <div class="content">
+        <!-- ======= START Nav Section ======= -->
+        <section nav>
+            <nav class="navbar navbar-expand-md fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand nav-link portfolio justify-content-start"
+                        href="https://juggernott81.github.io/" target="_blank"><img style="max-height: 30px;"
+                            src="/img/Github-profile.png"></a>
+                    <button class="navbar-toggler bg-dark navbar-dark" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/index.html" target="_self">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/mini-projects/loan-ranger/challenge.html" target="_self">Challenge</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/mini-projects/loan-ranger/app.html" target="_self">App</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/mini-projects/loan-ranger/code.html" target="_self">Code</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                            <li class="nav-item">
+                                <a class="nav-link portfolio" href="https://www.JuggernOtt81.com" target="_blank">Lawson
+                                    Ott's Portfolio</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </section>
+        <!-- ======= END Nav Section ======= -->
+        <!-- ======= START Main Section ======= -->
+        <section main>
+            <main class="content flex-shrink-0" id="hero">
+                <div class="container py-5 px-5 mt-3">
+                    <h1 class="mt-4 border-1 border-bottom border-dark" style="color:springgreen">The Code</h1>
+                    <div class="row row-cols-1 row-cols-lg-2">
+                        <div class="col-lg-7">
+                            <p style="color: springgreen; text-align: center;" class="mt-3">plain old JavaScript</p>
+                            
+
+<pre style="color:#d1d1d1;background:#000000;">
+
+    <span style="color:#9999a9; ">//start or controller function(get the values from the page)</span>
+    <span style="color:#e66170; font-weight:bold; ">function</span> getValues<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
+        <span style="color:#9999a9; ">//get the values from the page</span>
+        <span style="color:#e66170; font-weight:bold; ">let</span> fizzValue <span style="color:#d2cd86; ">=</span> document<span style="color:#d2cd86; ">.</span>getElementById<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">fizzValue</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span>value<span style="color:#b060b0; ">;</span>
+        <span style="color:#e66170; font-weight:bold; ">let</span> buzzValue <span style="color:#d2cd86; ">=</span> document<span style="color:#d2cd86; ">.</span>getElementById<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">buzzValue</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span>value<span style="color:#b060b0; ">;</span>
+        <span style="color:#e66170; font-weight:bold; ">let</span> limitValue <span style="color:#d2cd86; ">=</span> document<span style="color:#d2cd86; ">.</span>getElementById<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">limitValue</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span>value<span style="color:#b060b0; ">;</span>
+    
+        <span style="color:#9999a9; ">//parse into Integers</span>
+        fizzInt <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">parseInt</span><span style="color:#d2cd86; ">(</span>fizzValue<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+        buzzInt <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">parseInt</span><span style="color:#d2cd86; ">(</span>buzzValue<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+        limitInt <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">parseInt</span><span style="color:#d2cd86; ">(</span>limitValue<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+    
+        <span style="color:#9999a9; ">//validate that entries are integers</span>
+        <span style="color:#e66170; font-weight:bold; ">if</span> <span style="color:#d2cd86; ">(</span>
+        Number<span style="color:#d2cd86; ">.</span>isInteger<span style="color:#d2cd86; ">(</span>fizzInt<span style="color:#d2cd86; ">)</span> <span style="color:#d2cd86; ">&amp;&amp;</span>
+        Number<span style="color:#d2cd86; ">.</span>isInteger<span style="color:#d2cd86; ">(</span>buzzInt<span style="color:#d2cd86; ">)</span> <span style="color:#d2cd86; ">&amp;&amp;</span>
+        Number<span style="color:#d2cd86; ">.</span>isInteger<span style="color:#d2cd86; ">(</span>limitInt<span style="color:#d2cd86; ">)</span>
+        <span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
+        <span style="color:#9999a9; ">//define numbers by calling fizzBuzz funtion</span>
+        fizzBuzz<span style="color:#d2cd86; ">(</span>fizzInt<span style="color:#d2cd86; ">,</span> buzzInt<span style="color:#d2cd86; ">,</span> limitInt<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+        <span style="color:#b060b0; ">}</span> <span style="color:#e66170; font-weight:bold; ">else</span> <span style="color:#b060b0; ">{</span>
+        <span style="color:#e66170; font-weight:bold; ">alert</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">YOU MUST ENTER INTEGERS!</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+        <span style="color:#b060b0; ">}</span>
+    <span style="color:#b060b0; ">}</span>
+    
+    <span style="color:#9999a9; ">//build the array of results</span>
+    <span style="color:#e66170; font-weight:bold; ">function</span> fizzBuzz<span style="color:#d2cd86; ">(</span>fizzInt<span style="color:#d2cd86; ">,</span> buzzInt<span style="color:#d2cd86; ">,</span> limitInt<span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
+        <span style="color:#9999a9; ">//init the returnArray</span>
+        <span style="color:#e66170; font-weight:bold; ">let</span> returnArray <span style="color:#d2cd86; ">=</span> <span style="color:#d2cd86; ">[</span><span style="color:#d2cd86; ">]</span><span style="color:#b060b0; ">;</span>
+    
+        <span style="color:#9999a9; ">//loop from 1-li</span>
+        <span style="color:#e66170; font-weight:bold; ">let</span> li <span style="color:#d2cd86; ">=</span> limitInt<span style="color:#b060b0; ">;</span>
+        <span style="color:#e66170; font-weight:bold; ">let</span> fb <span style="color:#d2cd86; ">=</span> fizzInt <span style="color:#d2cd86; ">*</span> buzzInt<span style="color:#b060b0; ">;</span>
+        <span style="color:#e66170; font-weight:bold; ">let</span> i <span style="color:#d2cd86; ">=</span> <span style="color:#008c00; ">1</span><span style="color:#b060b0; ">;</span>
+        <span style="color:#e66170; font-weight:bold; ">while</span> <span style="color:#d2cd86; ">(</span>i <span style="color:#d2cd86; ">&lt;=</span> li<span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
+        <span style="color:#e66170; font-weight:bold; ">if</span> <span style="color:#d2cd86; ">(</span>i <span style="color:#d2cd86; ">%</span> fb <span style="color:#d2cd86; ">==</span> <span style="color:#008c00; ">0</span><span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
+            returnArray<span style="color:#d2cd86; ">.</span>push<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">`</span><span style="color:#00c4c4; ">FIZZ &lt;i  style="color: #f7e900" class="fa-solid fa-bolt"&gt;&lt;/i&gt; BUZZ</span><span style="color:#02d045; ">`</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+        <span style="color:#b060b0; ">}</span> <span style="color:#e66170; font-weight:bold; ">else</span> <span style="color:#e66170; font-weight:bold; ">if</span> <span style="color:#d2cd86; ">(</span>i <span style="color:#d2cd86; ">%</span> buzzInt <span style="color:#d2cd86; ">==</span> <span style="color:#008c00; ">0</span><span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
+            returnArray<span style="color:#d2cd86; ">.</span>push<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">`</span><span style="color:#00c4c4; ">&lt;span  style="color: red"&gt;BUZZ&lt;/span&gt;</span><span style="color:#02d045; ">`</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+        <span style="color:#b060b0; ">}</span> <span style="color:#e66170; font-weight:bold; ">else</span> <span style="color:#e66170; font-weight:bold; ">if</span> <span style="color:#d2cd86; ">(</span>i <span style="color:#d2cd86; ">%</span> fizzInt <span style="color:#d2cd86; ">==</span> <span style="color:#008c00; ">0</span><span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
+            returnArray<span style="color:#d2cd86; ">.</span>push<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">`</span><span style="color:#00c4c4; ">&lt;span  style="color: royalblue"&gt;FIZZ&lt;/span&gt;</span><span style="color:#02d045; ">`</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+        <span style="color:#b060b0; ">}</span> <span style="color:#e66170; font-weight:bold; ">else</span> <span style="color:#b060b0; ">{</span>
+            returnArray<span style="color:#d2cd86; ">.</span>push<span style="color:#d2cd86; ">(</span>i<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+        <span style="color:#b060b0; ">}</span>
+        i<span style="color:#d2cd86; ">++</span><span style="color:#b060b0; ">;</span>
+        <span style="color:#b060b0; ">}</span>
+        <span style="color:#9999a9; ">//pass the array to the displayData function</span>
+        displayData<span style="color:#d2cd86; ">(</span>returnArray<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+    <span style="color:#b060b0; ">}</span>
+    
+    <span style="color:#9999a9; ">//dynamically display table, width based on buzzInt</span>
+    <span style="color:#e66170; font-weight:bold; ">function</span> displayData<span style="color:#d2cd86; ">(</span>fbArray<span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
+        <span style="color:#9999a9; ">//loop over the array create a tablerow for each item.</span>
+        <span style="color:#e66170; font-weight:bold; ">let</span> templateRows <span style="color:#d2cd86; ">=</span> <span style="color:#02d045; ">"</span><span style="color:#02d045; ">"</span><span style="color:#b060b0; ">;</span>
+        <span style="color:#e66170; font-weight:bold; ">for</span> <span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">let</span> i <span style="color:#d2cd86; ">=</span> <span style="color:#008c00; ">0</span><span style="color:#b060b0; ">;</span> i <span style="color:#d2cd86; ">&lt;</span> fbArray<span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">length</span><span style="color:#b060b0; ">;</span> i<span style="color:#d2cd86; ">++</span><span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
+        <span style="color:#e66170; font-weight:bold; ">var</span> z <span style="color:#d2cd86; ">=</span> <span style="color:#02d045; ">"</span><span style="color:#02d045; ">"</span><span style="color:#b060b0; ">;</span>
+        <span style="color:#9999a9; ">//loop over the row defined by buzzInt</span>
+        <span style="color:#e66170; font-weight:bold; ">for</span> <span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">let</span> x <span style="color:#d2cd86; ">=</span> <span style="color:#008c00; ">0</span><span style="color:#b060b0; ">;</span> x <span style="color:#d2cd86; ">&lt;</span> buzzInt<span style="color:#b060b0; ">;</span> x<span style="color:#d2cd86; ">++</span><span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
+            z <span style="color:#d2cd86; ">+=</span> <span style="color:#02d045; ">`</span><span style="color:#00c4c4; ">&lt;td&gt;</span><span style="color:#02d045; ">${</span><span style="color:#00c4c4; ">fbArray</span><span style="color:#d2cd86; ">[</span><span style="color:#00c4c4; ">i</span><span style="color:#d2cd86; ">+</span><span style="color:#00c4c4; ">x</span><span style="color:#d2cd86; ">]</span><span style="color:#02d045; ">}</span><span style="color:#00c4c4; ">&lt;/td&gt;</span><span style="color:#02d045; ">`</span><span style="color:#b060b0; ">;</span>
+        <span style="color:#b060b0; ">}</span>
+        templateRows <span style="color:#d2cd86; ">+=</span> <span style="color:#02d045; ">`</span><span style="color:#00c4c4; ">&lt;tr&gt;</span><span style="color:#02d045; ">${</span><span style="color:#00c4c4; ">z</span><span style="color:#02d045; ">}</span><span style="color:#00c4c4; ">&lt;/tr&gt;</span><span style="color:#02d045; ">`</span><span style="color:#b060b0; ">;</span>
+        i <span style="color:#d2cd86; ">+=</span> buzzInt<span style="color:#d2cd86; ">-</span><span style="color:#008c00; ">1</span><span style="color:#b060b0; ">;</span>
+        <span style="color:#b060b0; ">}</span>
+        document<span style="color:#d2cd86; ">.</span>getElementById<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">results</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span>innerHTML <span style="color:#d2cd86; ">=</span> templateRows<span style="color:#b060b0; ">;</span>
+    <span style="color:#b060b0; ">}</span>
+    
+    <span style="color:#9999a9; ">//resets the table</span>
+    <span style="color:#e66170; font-weight:bold; ">function</span> resetTable<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
+        <span style="color:#e66170; font-weight:bold; ">let</span> templateRows <span style="color:#d2cd86; ">=</span> <span style="color:#02d045; ">"</span><span style="color:#02d045; ">"</span><span style="color:#b060b0; ">;</span>
+        document<span style="color:#d2cd86; ">.</span>getElementById<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">results</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span>innerHTML <span style="color:#d2cd86; ">=</span> templateRows<span style="color:#b060b0; ">;</span>
+    <span style="color:#b060b0; ">}</span>
+    </pre>
+                                
+    
+    <p style="color: springgreen; text-align: center;  font-size: small;">This code displays without error thanks to: <a href="https://tohtml.com"  class="nav-link" target="_blank">https://tohtml.com</a></p>                              
+<div class="border-1 border-bottom border-dark">
+
+</div>
+                        </div>
+                        <div class="col-lg-5">
+                            <p style="color: springgreen; text-align: center;" class="mt-3">An explanation:</p>
+                            <h3 style="color:deepskyblue;">The code is structured in 3 parts:</p>
+                            <p></p>
+                            <h4 style="color:floralwhite;">getValues()</h4>
+                            <p style="color:wheat;"><strong>getValues</strong> gets the user input from the page in the form of <strong>strings</strong> by utilizing
+                                <strong>getElementById</strong> to pull the values from the <strong>input</strong> fields.<br><br>
+                                Then we apply <strong>parseInt</strong> to the strings to get <strong>Integers</strong> to use for our purposes.<br><br>
+                                The <strong>if</strong> statement <strong>validates</strong> that <em>both</em> inputs were indeed Integers and only allows use to proceed 
+                                if that is the case. Otherwise, we get an error message telling us to fix the input(s).<br>The Integers are passed to the <strong>fizzBuzz()</strong> function.
+                            </p>
+
+                            <h4 style="color:floralwhite;">fizzBuzz()</h4>
+                            <p style="color:wheat;"><strong>fizzBuzz</strong> does what it says on the tin! It plays the game, assigning the Integers, 'FIZZ', 'BUZZ' & 'FIZZ-BUZZ' into their proper places in the array.<br>Then passes that array to the <strong>displayData()</strong> function.</p>
+
+                            <h4 style="color:floralwhite;">displayData()</h4>
+                            <p style="color:wheat;"><strong>displayData</strong> displays the data. In this incarnation, the data table width is defined by the Buzz Value set on the page. The outer loop cycles over the array to define a row per iteration, while the inner loop cycles over a subset, the size of the Buzz Value, setting the values into their respective places in each row.</p>
+
+                            <p style="color:deepskyblue; font-size: large;">
+                                The code is completed once the <strong>table</strong> on the APP page is filled with rows from the string <strong>templateRows</strong>.
+                            </p>
+
+                            <h4 style="color:floralwhite;" class="text-muted">resetTable()</h4>
+                            <p style="color:wheat;" class="text-muted"><strong>resetTable</strong> is called by the Reset button, and simply assigns an empty string to <em>templateRows</em>, thus giving the table nothing to display.
+                            </p>
+                            <div class="border-1 border-bottom border-dark">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </section>
+        <!-- ======= END Main Section ======= -->
+    </div>
+    <!-- ======= START Footer Section ======= -->
+    <section footer>
+        <footer class="m-0 bg-dark footer">
+            <div class="row container-fluid text-center">
+
+                <div class="col-3 justify-content-start">
+                    <span class="footerspan ">
+                        <a class="footerlink" href="https://www.juggernott81.com"> &copy; 2022</a>
+                    </span>
+                </div>
+                <!-- want to make this middle div col do something different on smaller screens, maybe cycle through the <a href="#"><i>icon</i>links</a> one at a time... but how? -->
+                <div class="col-2">
+                </div>
+                <div class="col-2 justify-content-center">
+                    <div class="hwrap">
+                        <div class="hmove">
+                            <div class="hitem"><a class="footerlink" href="https://github.com/JuggernOtt81"
+                                    target="_blank"><i class="fa-brands fa-github"></i></a></div>
+                            <div class="hitem"><a class="footerlink" href="https://www.linkedin.com/in/lawsonott/"
+                                    target="_blank"><i class="fa-brands fa-linkedin"></i></a></div>
+                            <div class="hitem"><a class="footerlink"
+                                    href="https://stackoverflow.com/users/9724160/juggern-ott" target="_blank"><i
+                                        class="fa-brands fa-stack-overflow"></i></a></div>
+                            <div class="hitem"><a class="footerlink" href="https://twitter.com/juggernott81"
+                                    target="_blank"><i class="fa-brands fa-twitter"></i></a></div>
+                            <div class="hitem"><a class="footerlink"
+                                    href="https://www.youtube.com/channel/UCo-xCEut1wxPv14RMFznbOg" target="_blank"><i
+                                        class="fa-brands fa-youtube"></i></a></div>
+                            <div class="hitem"><a class="footerlink" href="https://www.reddit.com/u/juggernott81"
+                                    target="_blank"><i class="fa-brands fa-reddit"></i></a></div>
+                            <div class="hitem"><a class="footerlink" href="https://www.quora.com/profile/Juggern-Ott"
+                                    target="_blank"><i class="fa-brands fa-quora"></i></a></div>
+                            <div class="hitem"><a class="footerlink" href="https://www.tiktok.com/@juggernott81"
+                                    target="_blank"><i class="fa-brands fa-tiktok"></i></a></div>
+                            <div class="hitem"><a class="footerlink" href="https://codepen.io/JuggernOtt81/pen/gzqNmW"
+                                    target="_blank"><i class="fa-brands fa-codepen"></i></a></div>
+                            <div class="hitem"><a class="footerlink" href="https://www.freecodecamp.org/juggernott81"
+                                    target="_blank"><i class="fa-brands fa-free-code-camp"></i></a></div>
+                            <div class="hitem"><a class="footerlink"
+                                    href="https://play.google.com/store/apps/developer?id=JuggernOtt81&hl=en_US&gl=US"
+                                    target="_blank"><i class="fa-brands fa-google-play"></i></a></div>
+                            <div class="hitem"><a class="footerlink"
+                                    href="https://developer.apple.com/forums/profile/JuggernOtt81" target="_blank"><i
+                                        class="fa-brands fa-apple"></i></a></div>
+                            <div class="hitem"><a class="footerlink"
+                                    href="https://techcommunity.microsoft.com/t5/user/viewprofilepage/user-id/1305014#profile"
+                                    target="_blank"><i class="fa-brands fa-microsoft"></i></a></div>
+                            <div class="hitem"><a class="footerlink" href="https://youtu.be/yJ9glRHCLW8" target="_blank"
+                                    style="color:white"><i class="iconify" data-icon="mdi:rabbit"></i></a></div>
+                            <div class="hitem"><a class="footerlink" href="#" target="_blank"></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                </div>
+                <div class="col-3 justify-content-end">
+                    <span class="footerspan">
+                        <a class="footerlink" href="https://github.com/JuggernOtt81/Showcase/blob/main/mini-projects/loan-ranger/code.html"
+                            target="_blank">view code</a></span>
+                </div>
+            </div>
+
+        </footer>
+    </section>
+    <!-- ======= END Footer Section ======= -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+        </script>
+    <!-- Iconify JS -->
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <!-- Font Awesome JS -->
+    <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
+    <!-- Prism JS -->
+    <!-- <script src="/loan-ranger/app-js/prism.js"></script> -->
+<!--     <script>
+        Prism.plugins.NormalizeWhitespace.setDefaults({
+            'remove-trailing': true,
+            'remove-indent': true,
+            'left-trim': true,
+            'right-trim': true
+        })
+    </script> -->
+
+</body>
+
+</html>
