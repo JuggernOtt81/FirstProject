@@ -2,65 +2,92 @@
 //start or controller function(get the values from the page)
 function getValues() {
   //get the values from the page
-  let fizzValue = document.getElementById("fizzValue").value;
-  let buzzValue = document.getElementById("buzzValue").value;
-  let limitValue = document.getElementById("limitValue").value;
+  var loanValue = document.getElementById("loanValue").value;
+  var termValue = document.getElementById("termValue").value;
+  var rateValue = document.getElementById("rateValue").value;
 
-  //parse into Integers
-  fizzInt = parseInt(fizzValue);
-  buzzInt = parseInt(buzzValue);
-  limitInt = parseInt(limitValue);
+  //parse into Doubles
+  var loanDouble = parseFloat(loanValue);
+  var termDouble = parseFloat(termValue);
+  var rateDouble = parseFloat(rateValue);
 
   //validate that entries are integers
   if (
-    Number.isInteger(fizzInt) &&
-    Number.isInteger(buzzInt) &&
-    Number.isInteger(limitInt)
+    !Number.isNaN(loanDouble) &&
+    !Number.isNaN(termDouble) &&
+    !Number.isNaN(rateDouble)
   ) {
-    //define numbers by calling fizzBuzz funtion
-    fizzBuzz(fizzInt, buzzInt, limitInt);
+    //define numbers by calling loanTerm funtion
+    amortize(loanDouble, termDouble, rateDouble);
   } else {
-    alert("YOU MUST ENTER INTEGERS!");
+    alert("YOU MUST ENTER NUMBERS!");
   }
 }
 
 //build the array of results
-function fizzBuzz(fizzInt, buzzInt, limitInt) {
+function amortize(loanDouble, termDouble, rateDouble) {
   //init the returnArray
   let returnArray = [];
+    
+  let l = loanDouble;
+  let R = rateDouble;
+  let t = termDouble;
+  let y = (t / 12);
+  let r = (R / 100000);
+  let i = l * r;
+  let ct = 0;
+  let ci = 0;
+  let a = l + i;
 
-  //loop from 1-li
-  let li = limitInt;
-  let fb = fizzInt * buzzInt;
-  let i = 1;
-  while (i <= li) {
-    if (i % fb == 0) {
-      returnArray.push(`FIZZ <i  style="color: #f7e900" class="fa-solid fa-bolt"></i> BUZZ`);
-    } else if (i % buzzInt == 0) {
-      returnArray.push(`<span  style="color: red">BUZZ</span>`);
-    } else if (i % fizzInt == 0) {
-      returnArray.push(`<span  style="color: royalblue">FIZZ</span>`);
-    } else {
-      returnArray.push(i);
-    }
-    i++;
+  for(iterator = 0; iterator < y; iterator++){
+    ct += a;
+    ci = ct * i;
+    ct += ci;
+    a = 0;
   }
+  let p = ct / t;
+  let ir = p / 300;
+  let ti = 0;
+  let remainingBalance = ct;  
+  let mi = 0;
+  let mp = 0;
+  let loanBalance = l;
+  
+  for(iterator = 0; iterator < t; iterator++){
+    if(iterator > 0){
+      console.log(`month #${iterator} | payment = ${p} | principle = ${mp} | interest = ${mi} | total interest = ${ti} | loan balance = ${loanBalance} | total of payments = ${remainingBalance} |`);
+    }
+    else{
+      console.log(`month #${iterator} | payment = 0 | principle = ${mp} | interest = ${mi} | total interest = ${ti} | loan balance = ${loanBalance} | total of payments = ${remainingBalance} |`);
+    }
+    
+    
+    mi = loanBalance / 300;
+    ti += mi;
+    mp = p - mi;    
+    remainingBalance -= p;
+    loanBalance -= mp;
+  }
+
+//Math.round((num + Number.EPSILON) * 100) / 100
+
+  
   //pass the array to the displayData function
   displayData(returnArray);
 }
 
-//dynamically display table, width based on buzzInt
+//dynamically display table, width based on termDouble
 function displayData(fbArray) {
   //loop over the array create a tablerow for each item.
   let templateRows = "";
   for (let i = 0; i < fbArray.length; i++) {
     var z = "";
-    //loop over the row defined by buzzInt
-    for (let x = 0; x < buzzInt; x++) {
+    //loop over the row defined by termDouble
+    for (let x = 0; x < termDouble; x++) {
       z += `<td>${fbArray[i+x]}</td>`;
     }
     templateRows += `<tr>${z}</tr>`;
-    i += buzzInt-1;
+    i += termDouble-1;
   }
   document.getElementById("results").innerHTML = templateRows;
 }
