@@ -1,5 +1,3 @@
-
-//start or controller function(get the values from the page)
 function getValues() {
   //get the values from the page
   var loanValue = document.getElementById("loanValue").value;
@@ -17,83 +15,61 @@ function getValues() {
     !Number.isNaN(termDouble) &&
     !Number.isNaN(rateDouble)
   ) {
-    //define numbers by calling loanTerm funtion
     amortize(loanDouble, termDouble, rateDouble);
   } else {
     alert("YOU MUST ENTER NUMBERS!");
   }
 }
 
-//build the array of results
 function amortize(loanDouble, termDouble, rateDouble) {
-  //init the returnArray
-  let returnArray = [];
-    
-  let l = loanDouble;
-  let R = rateDouble;
-  let t = termDouble;
-  let y = (t / 12);
-  let r = (R / 100000);
-  let i = l * r;
-  let ct = 0;
-  let ci = 0;
-  let a = l + i;
+  var L = loanDouble.toFixed(2); //L = loaned ammount
+  var R = rateDouble.toFixed(2); //R = rate entered as a double
+  var T = termDouble.toFixed(2); //T = term in months
+  var y = T / 12; //years = term in months / 12
+  var r = R / 100000; //r = R converted into percentage rate
+  var tip = 0; //tip = total interest payments
+  var mip = 0; //mip = monthly interest payment
+  var mpp = 0; //mpp = monthly principle payment
+  var L = loanDouble;
+  var i = L * r; //i = interest on the loaned amount
+  var loanBalance = L; //starting value for the loop to use
+  var r12 = R / 1200; //rate to calculate interest per month 
+  var mp = 0;
+  var contractBalance = getContractBalance(L, i, y); //starting value for the loop to use
+  var tmp = ((L * r12) / (1 - (1 + r12) ** -T)).toFixed(2);
+  contractBalance = (tmp * T).toFixed(2);
 
-  for(iterator = 0; iterator < y; iterator++){
+  for (iterator = 0; iterator < T + 1; iterator++) {
+    if (iterator > 0) {
+      console.log(
+        `month #${iterator} | payment = ${tmp} | principle = ${mpp} | interest = ${mip} | total interest = ${tip} | loan balance = ${loanBalance}`);
+    }
+    else{
+      console.log(
+        `month #${iterator} | payment = ${0} | principle = ${0} | interest = ${0} | total interest = ${0} | loan balance = ${loanBalance}`);
+    }
+
+    mp = ((L * r12) / (1 - (1 + r12) ** -T)).toFixed(2);
+    mip = (loanBalance * r12).toFixed(2);
+    mpp = (tmp - mip).toFixed(2);
+    loanBalance = (loanBalance - mpp).toFixed(2);
+    contractBalance = (contractBalance - mpp).toFixed(2);
+    tip = parseFloat(tip) + parseFloat(mip);
+    tip = tip.toFixed(2);
+  }
+}
+
+function getContractBalance(L, i, y) {
+  var ct = 0; //ct = current total
+  var ci = 0; //ci = current interest
+  var a = L + i; //a = loaned amount + interest
+
+  for (iterator = 0; iterator < y; iterator++) {
     ct += a;
     ci = ct * i;
     ct += ci;
     a = 0;
+    console.log(ct);
   }
-  let p = ct / t;
-  let ir = p / 300;
-  let ti = 0;
-  let remainingBalance = ct;  
-  let mi = 0;
-  let mp = 0;
-  let loanBalance = l;
-  
-  for(iterator = 0; iterator < t; iterator++){
-    if(iterator > 0){
-      console.log(`month #${iterator} | payment = ${p} | principle = ${mp} | interest = ${mi} | total interest = ${ti} | loan balance = ${loanBalance} | total of payments = ${remainingBalance} |`);
-    }
-    else{
-      console.log(`month #${iterator} | payment = 0 | principle = ${mp} | interest = ${mi} | total interest = ${ti} | loan balance = ${loanBalance} | total of payments = ${remainingBalance} |`);
-    }
-    
-    
-    mi = loanBalance / 300;
-    ti += mi;
-    mp = p - mi;    
-    remainingBalance -= p;
-    loanBalance -= mp;
-  }
-
-//Math.round((num + Number.EPSILON) * 100) / 100
-
-  
-  //pass the array to the displayData function
-  displayData(returnArray);
-}
-
-//dynamically display table, width based on termDouble
-function displayData(fbArray) {
-  //loop over the array create a tablerow for each item.
-  let templateRows = "";
-  for (let i = 0; i < fbArray.length; i++) {
-    var z = "";
-    //loop over the row defined by termDouble
-    for (let x = 0; x < termDouble; x++) {
-      z += `<td>${fbArray[i+x]}</td>`;
-    }
-    templateRows += `<tr>${z}</tr>`;
-    i += termDouble-1;
-  }
-  document.getElementById("results").innerHTML = templateRows;
-}
-
-//resets the table
-function resetTable() {
-  let templateRows = "";
-  document.getElementById("results").innerHTML = templateRows;
+  return ct;
 }
