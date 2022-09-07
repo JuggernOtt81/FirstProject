@@ -23,28 +23,35 @@ function getValues() {
 var returnArray = [];
 function amortize(loanDouble, termDouble, rateDouble) {
 
-  var payment = CalcPayment(loanDouble, rateDouble, termDouble);
+  var payment = calcPayment(loanDouble, rateDouble, termDouble);
   var monthlyRate = 0.0;
   var balance = loanDouble;
   var totalInterest = 0;
   var monthlyInterest = 0;
   var monthlyPrinciple = 0;
-  var monthlyRate = CalcMonthlyRate(rateDouble);
+  var monthlyRate = calcMonthlyRate(rateDouble);
   var fMonth = "";
   var newTotalInterest = 0;
   var newBalance = 0;
 
   for (let month = 0; month < termDouble; month++) {
 
-    monthlyInterest = CalcMonthlyInterest(balance, monthlyRate);
-    totalInterest = CalcTotalInterest(totalInterest, monthlyInterest);
-    monthlyPrinciple = CalcMonthlyPrinciple(payment, monthlyInterest);
-    newBalance = CalcNewBalance(balance, monthlyPrinciple);
+    monthlyInterest = calcMonthlyInterest(balance, monthlyRate);
+    totalInterest = calcTotalInterest(totalInterest, monthlyInterest);
+    monthlyPrinciple = calcMonthlyPrinciple(payment, monthlyInterest);
+    newBalance = calcNewBalance(balance, monthlyPrinciple);
     balance -= monthlyPrinciple;
     fMonth = (month + 1).toString();
 
     returnArray.push(
-      `<tr><td>#${fMonth}</td><td>$${payment}</td><td>$${monthlyPrinciple}</td><td>$${monthlyInterest}</td><td>$${totalInterest}</td><td>$${newBalance}</td></tr>`
+      `<tr>
+      <td>#${fMonth}</td>
+      <td>$${payment}</td>
+      <td>$${monthlyPrinciple}</td>
+      <td>$${monthlyInterest}</td>
+      <td>$${totalInterest}</td>
+      <td>$${newBalance}</td>
+      </tr>`
     );
   }
 
@@ -54,8 +61,8 @@ function amortize(loanDouble, termDouble, rateDouble) {
   displayData(returnArray);
 }
 
-function CalcPayment(loanDouble, rateDouble, termDouble) {
-  monthlyRate = CalcMonthlyRate(rateDouble);
+function calcPayment(loanDouble, rateDouble, termDouble) {
+  monthlyRate = calcMonthlyRate(rateDouble);
   var loan = loanDouble;
   var term = termDouble;
   var payment = (loan * monthlyRate) / (1 - (Math.pow(1 + monthlyRate, -term)));
@@ -63,22 +70,22 @@ function CalcPayment(loanDouble, rateDouble, termDouble) {
   return payment.toFixed(2);
 }
 
-function CalcMonthlyRate(rateDouble) {
+function calcMonthlyRate(rateDouble) {
   monthlyRate = rateDouble / 1200;
   return monthlyRate;
 }
 
-function CalcMonthlyInterest(balance, monthlyRate) {
+function calcMonthlyInterest(balance, monthlyRate) {
   monthlyInterest = balance * monthlyRate;
   return monthlyInterest.toFixed(2);
 }
 
-function CalcMonthlyPrinciple(payment, monthlyInterest) {
+function calcMonthlyPrinciple(payment, monthlyInterest) {
   monthlyPrinciple = payment - monthlyInterest;
   return monthlyPrinciple.toFixed(2);
 }
 
-function CalcTotalInterest(totalInterest, monthlyInterest) {
+function calcTotalInterest(totalInterest, monthlyInterest) {
   let a = parseFloat(totalInterest);
   let b = parseFloat(monthlyInterest);
   let x = a + b;
@@ -87,7 +94,7 @@ function CalcTotalInterest(totalInterest, monthlyInterest) {
   return newTotalInterest;
 }
 
-function CalcNewBalance(balance, monthlyPrinciple) {
+function calcNewBalance(balance, monthlyPrinciple) {
   let x = balance - monthlyPrinciple;
   newBalance = parseFloat(x);
 

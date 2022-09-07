@@ -42,18 +42,21 @@
                                 <a class="nav-link" href="/index.html" target="_self">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/mini-projects/loan-ranger/challenge.html" target="_self">Challenge</a>
+                                <a class="nav-link" href="/mini-projects/loan-ranger/challenge.html"
+                                    target="_self">Challenge</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/mini-projects/loan-ranger/app.html" target="_self">App</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/mini-projects/loan-ranger/code.html" target="_self">Code</a>
+                                <a class="nav-link active" aria-current="page"
+                                    href="/mini-projects/loan-ranger/code.html" target="_self">Code</a>
                             </li>
                         </ul>
                         <ul class="navbar-nav ms-auto mb-2 mb-md-0">
                             <li class="nav-item">
-                                <a class="nav-link portfolio" href="https://www.JuggernOtt81.com" target="_blank">Lawson's Links</a>
+                                <a class="nav-link portfolio" href="https://www.JuggernOtt81.com"
+                                    target="_blank">Lawson's Links</a>
                             </li>
                         </ul>
                     </div>
@@ -69,160 +72,209 @@
                     <div class="row row-cols-1 row-cols-lg-2">
                         <div class="col-lg-7">
                             <p style="color: springgreen; text-align: center;" class="mt-3">JavaScript</p>
-                            
 
 <pre style="color:#d1d1d1;background:#000000;">
-    
-    <span style="color:#9999a9; ">//get the values for calculations</span>
+
     <span style="color:#e66170; font-weight:bold; ">function</span> getValues<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
-        <span style="color:#9999a9; ">//get the values from the page</span>
-        <span style="color:#e66170; font-weight:bold; ">var</span> loanValue <span style="color:#d2cd86; ">=</span> document<span style="color:#d2cd86; ">.</span>getElementById<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">loanValue</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span>value<span style="color:#b060b0; ">;</span>
-        <span style="color:#e66170; font-weight:bold; ">var</span> termValue <span style="color:#d2cd86; ">=</span> document<span style="color:#d2cd86; ">.</span>getElementById<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">termValue</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span>value<span style="color:#b060b0; ">;</span>
-        <span style="color:#e66170; font-weight:bold; ">var</span> rateValue <span style="color:#d2cd86; ">=</span> document<span style="color:#d2cd86; ">.</span>getElementById<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">rateValue</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span>value<span style="color:#b060b0; ">;</span>
+    <span style="color:#9999a9; ">//get the values from the page</span>
+    <span style="color:#e66170; font-weight:bold; ">var</span> loanValue <span style="color:#d2cd86; ">=</span> document<span style="color:#d2cd86; ">.</span>getElementById<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">loanValue</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span>value<span style="color:#b060b0; ">;</span>
+    <span style="color:#e66170; font-weight:bold; ">var</span> termValue <span style="color:#d2cd86; ">=</span> document<span style="color:#d2cd86; ">.</span>getElementById<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">termValue</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span>value<span style="color:#b060b0; ">;</span>
+    <span style="color:#e66170; font-weight:bold; ">var</span> rateValue <span style="color:#d2cd86; ">=</span> document<span style="color:#d2cd86; ">.</span>getElementById<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">rateValue</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span>value<span style="color:#b060b0; ">;</span>
     
-        <span style="color:#9999a9; ">//parse into Doubles</span>
-        <span style="color:#e66170; font-weight:bold; ">var</span> loanDouble <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">parseFloat</span><span style="color:#d2cd86; ">(</span>loanValue<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
-        <span style="color:#e66170; font-weight:bold; ">var</span> termDouble <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">parseFloat</span><span style="color:#d2cd86; ">(</span>termValue<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
-        <span style="color:#e66170; font-weight:bold; ">var</span> rateDouble <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">parseFloat</span><span style="color:#d2cd86; ">(</span>rateValue<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+    <span style="color:#9999a9; ">//parse into Doubles</span>
+    <span style="color:#e66170; font-weight:bold; ">var</span> loanDouble <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">parseFloat</span><span style="color:#d2cd86; ">(</span>loanValue<span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">toFixed</span><span style="color:#d2cd86; ">(</span><span style="color:#008c00; ">2</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+    <span style="color:#e66170; font-weight:bold; ">var</span> termDouble <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">parseFloat</span><span style="color:#d2cd86; ">(</span>termValue<span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">toFixed</span><span style="color:#d2cd86; ">(</span><span style="color:#008c00; ">2</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+    <span style="color:#e66170; font-weight:bold; ">var</span> rateDouble <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">parseFloat</span><span style="color:#d2cd86; ">(</span>rateValue<span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">toFixed</span><span style="color:#d2cd86; ">(</span><span style="color:#008c00; ">2</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
     
-        <span style="color:#9999a9; ">//validate that entries are Doubles</span>
-        <span style="color:#e66170; font-weight:bold; ">if</span> <span style="color:#d2cd86; ">(</span>
+    <span style="color:#9999a9; ">//validate that entries are Doubles</span>
+    <span style="color:#e66170; font-weight:bold; ">if</span> <span style="color:#d2cd86; ">(</span>
         <span style="color:#d2cd86; ">!</span>Number<span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">isNaN</span><span style="color:#d2cd86; ">(</span>loanDouble<span style="color:#d2cd86; ">)</span> <span style="color:#d2cd86; ">&amp;&amp;</span>
         <span style="color:#d2cd86; ">!</span>Number<span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">isNaN</span><span style="color:#d2cd86; ">(</span>termDouble<span style="color:#d2cd86; ">)</span> <span style="color:#d2cd86; ">&amp;&amp;</span>
         <span style="color:#d2cd86; ">!</span>Number<span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">isNaN</span><span style="color:#d2cd86; ">(</span>rateDouble<span style="color:#d2cd86; ">)</span>
-        <span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
+    <span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
         amortize<span style="color:#d2cd86; ">(</span>loanDouble<span style="color:#d2cd86; ">,</span> termDouble<span style="color:#d2cd86; ">,</span> rateDouble<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
-        <span style="color:#b060b0; ">}</span> <span style="color:#e66170; font-weight:bold; ">else</span> <span style="color:#b060b0; ">{</span>
+    <span style="color:#b060b0; ">}</span> <span style="color:#e66170; font-weight:bold; ">else</span> <span style="color:#b060b0; ">{</span>
         <span style="color:#e66170; font-weight:bold; ">alert</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">YOU MUST ENTER NUMBERS!</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
-        <span style="color:#b060b0; ">}</span>
     <span style="color:#b060b0; ">}</span>
-    
+    <span style="color:#b060b0; ">}</span>
+    <span style="color:#e66170; font-weight:bold; ">var</span> returnArray <span style="color:#d2cd86; ">=</span> <span style="color:#d2cd86; ">[</span><span style="color:#d2cd86; ">]</span><span style="color:#b060b0; ">;</span>
     <span style="color:#e66170; font-weight:bold; ">function</span> amortize<span style="color:#d2cd86; ">(</span>loanDouble<span style="color:#d2cd86; ">,</span> termDouble<span style="color:#d2cd86; ">,</span> rateDouble<span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
-        <span style="color:#e66170; font-weight:bold; ">let</span> returnArray <span style="color:#d2cd86; ">=</span> <span style="color:#d2cd86; ">[</span><span style="color:#d2cd86; ">]</span><span style="color:#b060b0; ">;</span> <span style="color:#9999a9; ">//initialize an array</span>
-        <span style="color:#e66170; font-weight:bold; ">var</span> L <span style="color:#d2cd86; ">=</span> loanDouble<span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">toFixed</span><span style="color:#d2cd86; ">(</span><span style="color:#008c00; ">2</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span> <span style="color:#9999a9; ">//L = loaned ammount</span>
-        <span style="color:#e66170; font-weight:bold; ">var</span> R <span style="color:#d2cd86; ">=</span> rateDouble<span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">toFixed</span><span style="color:#d2cd86; ">(</span><span style="color:#008c00; ">2</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span> <span style="color:#9999a9; ">//R = rate entered as a double</span>
-        <span style="color:#e66170; font-weight:bold; ">var</span> T <span style="color:#d2cd86; ">=</span> termDouble<span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">toFixed</span><span style="color:#d2cd86; ">(</span><span style="color:#008c00; ">2</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span> <span style="color:#9999a9; ">//T = term in months</span>
-        <span style="color:#e66170; font-weight:bold; ">var</span> y <span style="color:#d2cd86; ">=</span> T <span style="color:#d2cd86; ">/</span> <span style="color:#008c00; ">12</span><span style="color:#b060b0; ">;</span> <span style="color:#9999a9; ">//years = term in months / 12</span>
-        <span style="color:#e66170; font-weight:bold; ">var</span> r <span style="color:#d2cd86; ">=</span> R <span style="color:#d2cd86; ">/</span> <span style="color:#008c00; ">100000</span><span style="color:#b060b0; ">;</span> <span style="color:#9999a9; ">//r = R converted into percentage rate</span>
-        <span style="color:#e66170; font-weight:bold; ">var</span> tip <span style="color:#d2cd86; ">=</span> <span style="color:#008c00; ">0</span><span style="color:#b060b0; ">;</span> <span style="color:#9999a9; ">//tip = total interest payments</span>
-        <span style="color:#e66170; font-weight:bold; ">var</span> mip <span style="color:#d2cd86; ">=</span> <span style="color:#008c00; ">0</span><span style="color:#b060b0; ">;</span> <span style="color:#9999a9; ">//mip = monthly interest payment</span>
-        <span style="color:#e66170; font-weight:bold; ">var</span> mpp <span style="color:#d2cd86; ">=</span> <span style="color:#008c00; ">0</span><span style="color:#b060b0; ">;</span> <span style="color:#9999a9; ">//mpp = monthly principle payment</span>
-        <span style="color:#e66170; font-weight:bold; ">var</span> L <span style="color:#d2cd86; ">=</span> loanDouble<span style="color:#b060b0; ">;</span>
-        <span style="color:#e66170; font-weight:bold; ">var</span> i <span style="color:#d2cd86; ">=</span> L <span style="color:#d2cd86; ">*</span> r<span style="color:#b060b0; ">;</span> <span style="color:#9999a9; ">//i = interest on the loaned amount</span>
-        <span style="color:#e66170; font-weight:bold; ">var</span> loanBalance <span style="color:#d2cd86; ">=</span> L<span style="color:#b060b0; ">;</span> <span style="color:#9999a9; ">//starting value for the loop to use</span>
-        <span style="color:#e66170; font-weight:bold; ">var</span> r12 <span style="color:#d2cd86; ">=</span> R <span style="color:#d2cd86; ">/</span> <span style="color:#008c00; ">1200</span><span style="color:#b060b0; ">;</span> <span style="color:#9999a9; ">//rate to calculate interest per month</span>
-        <span style="color:#e66170; font-weight:bold; ">var</span> mp <span style="color:#d2cd86; ">=</span> <span style="color:#008c00; ">0</span><span style="color:#b060b0; ">;</span>
     
-        <span style="color:#9999a9; ">//starting value for the loop to use</span>
-        <span style="color:#e66170; font-weight:bold; ">var</span> contractBalance <span style="color:#d2cd86; ">=</span> getContractBalance<span style="color:#d2cd86; ">(</span>L<span style="color:#d2cd86; ">,</span> i<span style="color:#d2cd86; ">,</span> y<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span> 
-        <span style="color:#e66170; font-weight:bold; ">var</span> tmp <span style="color:#d2cd86; ">=</span> <span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">(</span>L <span style="color:#d2cd86; ">*</span> r12<span style="color:#d2cd86; ">)</span> <span style="color:#d2cd86; ">/</span> <span style="color:#d2cd86; ">(</span><span style="color:#008c00; ">1</span> <span style="color:#d2cd86; ">-</span> <span style="color:#d2cd86; ">(</span><span style="color:#008c00; ">1</span> <span style="color:#d2cd86; ">+</span> r12<span style="color:#d2cd86; ">)</span> <span style="color:#d2cd86; ">*</span><span style="color:#d2cd86; ">*</span> <span style="color:#d2cd86; ">-</span>T<span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">toFixed</span><span style="color:#d2cd86; ">(</span><span style="color:#008c00; ">2</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
-        contractBalance <span style="color:#d2cd86; ">=</span> <span style="color:#d2cd86; ">(</span>tmp <span style="color:#d2cd86; ">*</span> T<span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">toFixed</span><span style="color:#d2cd86; ">(</span><span style="color:#008c00; ">2</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+    <span style="color:#e66170; font-weight:bold; ">var</span> payment <span style="color:#d2cd86; ">=</span> calcPayment<span style="color:#d2cd86; ">(</span>loanDouble<span style="color:#d2cd86; ">,</span> rateDouble<span style="color:#d2cd86; ">,</span> termDouble<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+    <span style="color:#e66170; font-weight:bold; ">var</span> monthlyRate <span style="color:#d2cd86; ">=</span> <span style="color:#009f00; ">0.0</span><span style="color:#b060b0; ">;</span>
+    <span style="color:#e66170; font-weight:bold; ">var</span> balance <span style="color:#d2cd86; ">=</span> loanDouble<span style="color:#b060b0; ">;</span>
+    <span style="color:#e66170; font-weight:bold; ">var</span> totalInterest <span style="color:#d2cd86; ">=</span> <span style="color:#008c00; ">0</span><span style="color:#b060b0; ">;</span>
+    <span style="color:#e66170; font-weight:bold; ">var</span> monthlyInterest <span style="color:#d2cd86; ">=</span> <span style="color:#008c00; ">0</span><span style="color:#b060b0; ">;</span>
+    <span style="color:#e66170; font-weight:bold; ">var</span> monthlyPrinciple <span style="color:#d2cd86; ">=</span> <span style="color:#008c00; ">0</span><span style="color:#b060b0; ">;</span>
+    <span style="color:#e66170; font-weight:bold; ">var</span> monthlyRate <span style="color:#d2cd86; ">=</span> calcMonthlyRate<span style="color:#d2cd86; ">(</span>rateDouble<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+    <span style="color:#e66170; font-weight:bold; ">var</span> fMonth <span style="color:#d2cd86; ">=</span> <span style="color:#02d045; ">"</span><span style="color:#02d045; ">"</span><span style="color:#b060b0; ">;</span>
+    <span style="color:#e66170; font-weight:bold; ">var</span> newTotalInterest <span style="color:#d2cd86; ">=</span> <span style="color:#008c00; ">0</span><span style="color:#b060b0; ">;</span>
+    <span style="color:#e66170; font-weight:bold; ">var</span> newBalance <span style="color:#d2cd86; ">=</span> <span style="color:#008c00; ">0</span><span style="color:#b060b0; ">;</span>
     
-        <span style="color:#9999a9; ">//run algorithm and push results of each iteration into the array</span>
-        <span style="color:#e66170; font-weight:bold; ">for</span> <span style="color:#d2cd86; ">(</span>iterator <span style="color:#d2cd86; ">=</span> <span style="color:#008c00; ">0</span><span style="color:#b060b0; ">;</span> iterator <span style="color:#d2cd86; ">&lt;</span> T <span style="color:#d2cd86; ">+</span> <span style="color:#008c00; ">1</span><span style="color:#b060b0; ">;</span> iterator<span style="color:#d2cd86; ">++</span><span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
-        <span style="color:#e66170; font-weight:bold; ">if</span> <span style="color:#d2cd86; ">(</span>iterator <span style="color:#d2cd86; ">&gt;</span> <span style="color:#008c00; ">0</span><span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
-            returnArray<span style="color:#d2cd86; ">.</span>push<span style="color:#d2cd86; ">(</span>
-            <span style="color:#02d045; ">`</span><span style="color:#00c4c4; ">&lt;tr&gt;&lt;td&gt;month #</span><span style="color:#02d045; ">${</span><span style="color:#00c4c4; ">iterator</span><span style="color:#02d045; ">}</span><span style="color:#00c4c4; ">&lt;/td&gt;</span>
-    <span style="color:#00c4c4; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;payment = </span><span style="color:#02d045; ">${</span><span style="color:#00c4c4; ">tmp</span><span style="color:#02d045; ">}</span><span style="color:#00c4c4; ">&lt;/td&gt;</span>
-    <span style="color:#00c4c4; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;principle = </span><span style="color:#02d045; ">${</span><span style="color:#00c4c4; ">mpp</span><span style="color:#02d045; ">}</span><span style="color:#00c4c4; ">&lt;/td&gt;</span>
-    <span style="color:#00c4c4; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;interest = </span><span style="color:#02d045; ">${</span><span style="color:#00c4c4; ">mip</span><span style="color:#02d045; ">}</span><span style="color:#00c4c4; ">&lt;/td&gt;</span>
-    <span style="color:#00c4c4; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;total interest = </span><span style="color:#02d045; ">${</span><span style="color:#00c4c4; ">tip</span><span style="color:#02d045; ">}</span><span style="color:#00c4c4; ">&lt;/td&gt;</span>
-    <span style="color:#00c4c4; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;loan balance = </span><span style="color:#02d045; ">${</span><span style="color:#00c4c4; ">loanBalance</span><span style="color:#02d045; ">}</span><span style="color:#00c4c4; ">&lt;/td&gt;</span><span style="color:#02d045; ">`</span>
-            <span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
-        <span style="color:#b060b0; ">}</span> <span style="color:#e66170; font-weight:bold; ">else</span> <span style="color:#b060b0; ">{</span>
-            returnArray<span style="color:#d2cd86; ">.</span>push<span style="color:#d2cd86; ">(</span>
-            <span style="color:#02d045; ">`</span><span style="color:#00c4c4; ">&lt;tr&gt;&lt;td&gt;month #</span><span style="color:#02d045; ">${</span><span style="color:#00c4c4; ">iterator</span><span style="color:#02d045; ">}</span><span style="color:#00c4c4; ">&lt;/td&gt;</span>
-    <span style="color:#00c4c4; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;payment = </span><span style="color:#02d045; ">${</span><span style="color:#008c00; ">0</span><span style="color:#02d045; ">}</span><span style="color:#00c4c4; ">&lt;/td&gt;</span>
-    <span style="color:#00c4c4; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;principle = </span><span style="color:#02d045; ">${</span><span style="color:#00c4c4; ">mpp</span><span style="color:#02d045; ">}</span><span style="color:#00c4c4; ">&lt;/td&gt;</span>
-    <span style="color:#00c4c4; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;interest = </span><span style="color:#02d045; ">${</span><span style="color:#00c4c4; ">mip</span><span style="color:#02d045; ">}</span><span style="color:#00c4c4; ">&lt;/td&gt;</span>
-    <span style="color:#00c4c4; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;total interest = </span><span style="color:#02d045; ">${</span><span style="color:#00c4c4; ">tip</span><span style="color:#02d045; ">}</span><span style="color:#00c4c4; ">&lt;/td&gt;</span>
-    <span style="color:#00c4c4; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;loan balance = </span><span style="color:#02d045; ">${</span><span style="color:#00c4c4; ">loanBalance</span><span style="color:#02d045; ">}</span><span style="color:#00c4c4; ">&lt;/td&gt;</span><span style="color:#02d045; ">`</span>
-            <span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
-        <span style="color:#b060b0; ">}</span>
-        <span style="color:#9999a9; ">//math for next iteration</span>
-        mp <span style="color:#d2cd86; ">=</span> <span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">(</span>L <span style="color:#d2cd86; ">*</span> r12<span style="color:#d2cd86; ">)</span> <span style="color:#d2cd86; ">/</span> <span style="color:#d2cd86; ">(</span><span style="color:#008c00; ">1</span> <span style="color:#d2cd86; ">-</span> <span style="color:#d2cd86; ">(</span><span style="color:#008c00; ">1</span> <span style="color:#d2cd86; ">+</span> r12<span style="color:#d2cd86; ">)</span> <span style="color:#d2cd86; ">*</span><span style="color:#d2cd86; ">*</span> <span style="color:#d2cd86; ">-</span>T<span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">toFixed</span><span style="color:#d2cd86; ">(</span><span style="color:#008c00; ">2</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
-        mip <span style="color:#d2cd86; ">=</span> <span style="color:#d2cd86; ">(</span>loanBalance <span style="color:#d2cd86; ">*</span> r12<span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">toFixed</span><span style="color:#d2cd86; ">(</span><span style="color:#008c00; ">2</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
-        mpp <span style="color:#d2cd86; ">=</span> <span style="color:#d2cd86; ">(</span>tmp <span style="color:#d2cd86; ">-</span> mip<span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">toFixed</span><span style="color:#d2cd86; ">(</span><span style="color:#008c00; ">2</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
-        loanBalance <span style="color:#d2cd86; ">=</span> <span style="color:#d2cd86; ">(</span>loanBalance <span style="color:#d2cd86; ">-</span> mpp<span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">toFixed</span><span style="color:#d2cd86; ">(</span><span style="color:#008c00; ">2</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
-        contractBalance <span style="color:#d2cd86; ">=</span> <span style="color:#d2cd86; ">(</span>contractBalance <span style="color:#d2cd86; ">-</span> mpp<span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">toFixed</span><span style="color:#d2cd86; ">(</span><span style="color:#008c00; ">2</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
-        tip <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">parseFloat</span><span style="color:#d2cd86; ">(</span>tip<span style="color:#d2cd86; ">)</span> <span style="color:#d2cd86; ">+</span> <span style="color:#e66170; font-weight:bold; ">parseFloat</span><span style="color:#d2cd86; ">(</span>mip<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
-        tip <span style="color:#d2cd86; ">=</span> tip<span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">toFixed</span><span style="color:#d2cd86; ">(</span><span style="color:#008c00; ">2</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
-        <span style="color:#b060b0; ">}</span>
-        displayData<span style="color:#d2cd86; ">(</span>returnArray<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+    <span style="color:#e66170; font-weight:bold; ">for</span> <span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">let</span> month <span style="color:#d2cd86; ">=</span> <span style="color:#008c00; ">0</span><span style="color:#b060b0; ">;</span> month <span style="color:#d2cd86; ">&lt;</span> termDouble<span style="color:#b060b0; ">;</span> month<span style="color:#d2cd86; ">++</span><span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
+    
+        monthlyInterest <span style="color:#d2cd86; ">=</span> calcMonthlyInterest<span style="color:#d2cd86; ">(</span>balance<span style="color:#d2cd86; ">,</span> monthlyRate<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+        totalInterest <span style="color:#d2cd86; ">=</span> calcTotalInterest<span style="color:#d2cd86; ">(</span>totalInterest<span style="color:#d2cd86; ">,</span> monthlyInterest<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+        monthlyPrinciple <span style="color:#d2cd86; ">=</span> calcMonthlyPrinciple<span style="color:#d2cd86; ">(</span>payment<span style="color:#d2cd86; ">,</span> monthlyInterest<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+        newBalance <span style="color:#d2cd86; ">=</span> calcNewBalance<span style="color:#d2cd86; ">(</span>balance<span style="color:#d2cd86; ">,</span> monthlyPrinciple<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+        balance <span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">=</span> monthlyPrinciple<span style="color:#b060b0; ">;</span>
+        fMonth <span style="color:#d2cd86; ">=</span> <span style="color:#d2cd86; ">(</span>month <span style="color:#d2cd86; ">+</span> <span style="color:#008c00; ">1</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">toString</span><span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+    
+        returnArray<span style="color:#d2cd86; ">.</span>push<span style="color:#d2cd86; ">(</span>
+        <span style="color:#02d045; ">`</span><span style="color:#00c4c4; ">&lt;tr&gt;</span>
+    <span style="color:#00c4c4; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;#</span><span style="color:#02d045; ">${</span><span style="color:#00c4c4; ">fMonth</span><span style="color:#02d045; ">}</span><span style="color:#00c4c4; ">&lt;/td&gt;</span>
+    <span style="color:#00c4c4; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;$</span><span style="color:#02d045; ">${</span><span style="color:#00c4c4; ">payment</span><span style="color:#02d045; ">}</span><span style="color:#00c4c4; ">&lt;/td&gt;</span>
+    <span style="color:#00c4c4; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;$</span><span style="color:#02d045; ">${</span><span style="color:#00c4c4; ">monthlyPrinciple</span><span style="color:#02d045; ">}</span><span style="color:#00c4c4; ">&lt;/td&gt;</span>
+    <span style="color:#00c4c4; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;$</span><span style="color:#02d045; ">${</span><span style="color:#00c4c4; ">monthlyInterest</span><span style="color:#02d045; ">}</span><span style="color:#00c4c4; ">&lt;/td&gt;</span>
+    <span style="color:#00c4c4; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;$</span><span style="color:#02d045; ">${</span><span style="color:#00c4c4; ">totalInterest</span><span style="color:#02d045; ">}</span><span style="color:#00c4c4; ">&lt;/td&gt;</span>
+    <span style="color:#00c4c4; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;$</span><span style="color:#02d045; ">${</span><span style="color:#00c4c4; ">newBalance</span><span style="color:#02d045; ">}</span><span style="color:#00c4c4; ">&lt;/td&gt;</span>
+    <span style="color:#00c4c4; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</span><span style="color:#02d045; ">`</span>
+        <span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
     <span style="color:#b060b0; ">}</span>
     
-    <span style="color:#9999a9; ">//current total = (previous total + 1 year interest), </span>
-    <span style="color:#9999a9; ">//then previous total = current total... </span>
-    <span style="color:#9999a9; ">//loop for # of years (or term in months / 12)</span>
-    <span style="color:#e66170; font-weight:bold; ">function</span> getContractBalance<span style="color:#d2cd86; ">(</span>L<span style="color:#d2cd86; ">,</span> i<span style="color:#d2cd86; ">,</span> y<span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
-        <span style="color:#e66170; font-weight:bold; ">var</span> ct <span style="color:#d2cd86; ">=</span> <span style="color:#008c00; ">0</span><span style="color:#b060b0; ">;</span> <span style="color:#9999a9; ">//ct = current total</span>
-        <span style="color:#e66170; font-weight:bold; ">var</span> ci <span style="color:#d2cd86; ">=</span> <span style="color:#008c00; ">0</span><span style="color:#b060b0; ">;</span> <span style="color:#9999a9; ">//ci = current interest</span>
-        <span style="color:#e66170; font-weight:bold; ">var</span> a <span style="color:#d2cd86; ">=</span> L <span style="color:#d2cd86; ">+</span> i<span style="color:#b060b0; ">;</span> <span style="color:#9999a9; ">//a = loaned amount + interest</span>
+    TotalInterest <span style="color:#d2cd86; ">=</span> totalInterest<span style="color:#b060b0; ">;</span>
+    TotalCost <span style="color:#d2cd86; ">=</span> loanDouble <span style="color:#d2cd86; ">+</span> totalInterest<span style="color:#b060b0; ">;</span>
     
-        <span style="color:#e66170; font-weight:bold; ">for</span> <span style="color:#d2cd86; ">(</span>iterator <span style="color:#d2cd86; ">=</span> <span style="color:#008c00; ">0</span><span style="color:#b060b0; ">;</span> iterator <span style="color:#d2cd86; ">&lt;</span> y<span style="color:#b060b0; ">;</span> iterator<span style="color:#d2cd86; ">++</span><span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
-        ct <span style="color:#d2cd86; ">+=</span> a<span style="color:#b060b0; ">;</span>
-        ci <span style="color:#d2cd86; ">=</span> ct <span style="color:#d2cd86; ">*</span> i<span style="color:#b060b0; ">;</span>
-        ct <span style="color:#d2cd86; ">+=</span> ci<span style="color:#b060b0; ">;</span>
-        a <span style="color:#d2cd86; ">=</span> <span style="color:#008c00; ">0</span><span style="color:#b060b0; ">;</span>
-        console<span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">log</span><span style="color:#d2cd86; ">(</span>ct<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
-        <span style="color:#b060b0; ">}</span>
-        <span style="color:#e66170; font-weight:bold; ">return</span> ct<span style="color:#b060b0; ">;</span>
+    displayData<span style="color:#d2cd86; ">(</span>returnArray<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
     <span style="color:#b060b0; ">}</span>
     
-    <span style="color:#9999a9; ">//display the results stored in the array, line by line</span>
+    <span style="color:#e66170; font-weight:bold; ">function</span> calcPayment<span style="color:#d2cd86; ">(</span>loanDouble<span style="color:#d2cd86; ">,</span> rateDouble<span style="color:#d2cd86; ">,</span> termDouble<span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
+    monthlyRate <span style="color:#d2cd86; ">=</span> calcMonthlyRate<span style="color:#d2cd86; ">(</span>rateDouble<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+    <span style="color:#e66170; font-weight:bold; ">var</span> loan <span style="color:#d2cd86; ">=</span> loanDouble<span style="color:#b060b0; ">;</span>
+    <span style="color:#e66170; font-weight:bold; ">var</span> term <span style="color:#d2cd86; ">=</span> termDouble<span style="color:#b060b0; ">;</span>
+    <span style="color:#e66170; font-weight:bold; ">var</span> payment <span style="color:#d2cd86; ">=</span> <span style="color:#d2cd86; ">(</span>loan <span style="color:#d2cd86; ">*</span> monthlyRate<span style="color:#d2cd86; ">)</span> <span style="color:#d2cd86; ">/</span> <span style="color:#d2cd86; ">(</span><span style="color:#008c00; ">1</span> <span style="color:#d2cd86; ">-</span> <span style="color:#d2cd86; ">(</span>Math<span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">pow</span><span style="color:#d2cd86; ">(</span><span style="color:#008c00; ">1</span> <span style="color:#d2cd86; ">+</span> monthlyRate<span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">-</span>term<span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+    
+    <span style="color:#e66170; font-weight:bold; ">return</span> payment<span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">toFixed</span><span style="color:#d2cd86; ">(</span><span style="color:#008c00; ">2</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+    <span style="color:#b060b0; ">}</span>
+    
+    <span style="color:#e66170; font-weight:bold; ">function</span> calcMonthlyRate<span style="color:#d2cd86; ">(</span>rateDouble<span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
+    monthlyRate <span style="color:#d2cd86; ">=</span> rateDouble <span style="color:#d2cd86; ">/</span> <span style="color:#008c00; ">1200</span><span style="color:#b060b0; ">;</span>
+    <span style="color:#e66170; font-weight:bold; ">return</span> monthlyRate<span style="color:#b060b0; ">;</span>
+    <span style="color:#b060b0; ">}</span>
+    
+    <span style="color:#e66170; font-weight:bold; ">function</span> calcMonthlyInterest<span style="color:#d2cd86; ">(</span>balance<span style="color:#d2cd86; ">,</span> monthlyRate<span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
+    monthlyInterest <span style="color:#d2cd86; ">=</span> balance <span style="color:#d2cd86; ">*</span> monthlyRate<span style="color:#b060b0; ">;</span>
+    <span style="color:#e66170; font-weight:bold; ">return</span> monthlyInterest<span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">toFixed</span><span style="color:#d2cd86; ">(</span><span style="color:#008c00; ">2</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+    <span style="color:#b060b0; ">}</span>
+    
+    <span style="color:#e66170; font-weight:bold; ">function</span> calcMonthlyPrinciple<span style="color:#d2cd86; ">(</span>payment<span style="color:#d2cd86; ">,</span> monthlyInterest<span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
+    monthlyPrinciple <span style="color:#d2cd86; ">=</span> payment <span style="color:#d2cd86; ">-</span> monthlyInterest<span style="color:#b060b0; ">;</span>
+    <span style="color:#e66170; font-weight:bold; ">return</span> monthlyPrinciple<span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">toFixed</span><span style="color:#d2cd86; ">(</span><span style="color:#008c00; ">2</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+    <span style="color:#b060b0; ">}</span>
+    
+    <span style="color:#e66170; font-weight:bold; ">function</span> calcTotalInterest<span style="color:#d2cd86; ">(</span>totalInterest<span style="color:#d2cd86; ">,</span> monthlyInterest<span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
+    <span style="color:#e66170; font-weight:bold; ">let</span> a <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">parseFloat</span><span style="color:#d2cd86; ">(</span>totalInterest<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+    <span style="color:#e66170; font-weight:bold; ">let</span> b <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">parseFloat</span><span style="color:#d2cd86; ">(</span>monthlyInterest<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+    <span style="color:#e66170; font-weight:bold; ">let</span> x <span style="color:#d2cd86; ">=</span> a <span style="color:#d2cd86; ">+</span> b<span style="color:#b060b0; ">;</span>
+    newTotalInterest <span style="color:#d2cd86; ">=</span> x<span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">toFixed</span><span style="color:#d2cd86; ">(</span><span style="color:#008c00; ">2</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+    
+    <span style="color:#e66170; font-weight:bold; ">return</span> newTotalInterest<span style="color:#b060b0; ">;</span>
+    <span style="color:#b060b0; ">}</span>
+    
+    <span style="color:#e66170; font-weight:bold; ">function</span> calcNewBalance<span style="color:#d2cd86; ">(</span>balance<span style="color:#d2cd86; ">,</span> monthlyPrinciple<span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
+    <span style="color:#e66170; font-weight:bold; ">let</span> x <span style="color:#d2cd86; ">=</span> balance <span style="color:#d2cd86; ">-</span> monthlyPrinciple<span style="color:#b060b0; ">;</span>
+    newBalance <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">parseFloat</span><span style="color:#d2cd86; ">(</span>x<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+    
+    <span style="color:#e66170; font-weight:bold; ">return</span> newBalance<span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">toFixed</span><span style="color:#d2cd86; ">(</span><span style="color:#008c00; ">2</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+    <span style="color:#b060b0; ">}</span>
+    
     <span style="color:#e66170; font-weight:bold; ">function</span> displayData<span style="color:#d2cd86; ">(</span>returnArray<span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
-        <span style="color:#e66170; font-weight:bold; ">let</span> templateRows <span style="color:#d2cd86; ">=</span> <span style="color:#02d045; ">"</span><span style="color:#02d045; ">"</span><span style="color:#b060b0; ">;</span>
-        <span style="color:#e66170; font-weight:bold; ">for</span> <span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">let</span> i <span style="color:#d2cd86; ">=</span> <span style="color:#008c00; ">0</span><span style="color:#b060b0; ">;</span> i <span style="color:#d2cd86; ">&lt;</span> returnArray<span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">length</span><span style="color:#b060b0; ">;</span> i<span style="color:#d2cd86; ">++</span><span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
-        <span style="color:#e66170; font-weight:bold; ">let</span> number <span style="color:#d2cd86; ">=</span> returnArray<span style="color:#d2cd86; ">[</span>i<span style="color:#d2cd86; ">]</span><span style="color:#b060b0; ">;</span>
+    <span style="color:#e66170; font-weight:bold; ">let</span> templateRows <span style="color:#d2cd86; ">=</span> <span style="color:#02d045; ">"</span><span style="color:#02d045; ">"</span><span style="color:#b060b0; ">;</span>
+    <span style="color:#e66170; font-weight:bold; ">for</span> <span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">let</span> i <span style="color:#d2cd86; ">=</span> <span style="color:#008c00; ">0</span><span style="color:#b060b0; ">;</span> i <span style="color:#d2cd86; ">&lt;</span> returnArray<span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">length</span><span style="color:#b060b0; ">;</span> i<span style="color:#d2cd86; ">++</span><span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
         templateRows <span style="color:#d2cd86; ">+=</span> <span style="color:#02d045; ">`</span><span style="color:#02d045; ">${</span><span style="color:#00c4c4; ">returnArray</span><span style="color:#d2cd86; ">[</span><span style="color:#00c4c4; ">i</span><span style="color:#d2cd86; ">]</span><span style="color:#02d045; ">}</span><span style="color:#02d045; ">`</span><span style="color:#b060b0; ">;</span>
-        <span style="color:#b060b0; ">}</span>
-        document<span style="color:#d2cd86; ">.</span>getElementById<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">results</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span>innerHTML <span style="color:#d2cd86; ">=</span> templateRows<span style="color:#b060b0; ">;</span>
+    <span style="color:#b060b0; ">}</span>
+    document<span style="color:#d2cd86; ">.</span>getElementById<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">results</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span>innerHTML <span style="color:#d2cd86; ">=</span> templateRows<span style="color:#b060b0; ">;</span>
     <span style="color:#b060b0; ">}</span>
     
     <span style="color:#9999a9; ">//resets the table</span>
     <span style="color:#e66170; font-weight:bold; ">function</span> resetTable<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
-        <span style="color:#e66170; font-weight:bold; ">let</span> templateRows <span style="color:#d2cd86; ">=</span> <span style="color:#02d045; ">"</span><span style="color:#02d045; ">"</span><span style="color:#b060b0; ">;</span>
-        document<span style="color:#d2cd86; ">.</span>getElementById<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">results</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span>innerHTML <span style="color:#d2cd86; ">=</span> templateRows<span style="color:#b060b0; ">;</span>
+    <span style="color:#e66170; font-weight:bold; ">let</span> templateRows <span style="color:#d2cd86; ">=</span> <span style="color:#02d045; ">"</span><span style="color:#02d045; ">"</span><span style="color:#b060b0; ">;</span>
+    document<span style="color:#d2cd86; ">.</span>getElementById<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">results</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span>innerHTML <span style="color:#d2cd86; ">=</span> templateRows<span style="color:#b060b0; ">;</span>
     <span style="color:#b060b0; ">}</span>
     </pre>
-                                
-    
-    <p style="color: springgreen; text-align: center;  font-size: small;">This code displays without error thanks to: <a href="https://tohtml.com"  class="nav-link" target="_blank">https://tohtml.com</a></p>                              
-<div class="border-1 border-bottom border-dark">
 
-</div>
+                            <p style="color: springgreen; text-align: center;  font-size: small;">This code displays
+                                without error thanks to: <a href="https://tohtml.com" class="nav-link"
+                                    target="_blank">https://tohtml.com</a></p>
+                            <div class="border-1 border-bottom border-dark">
+
+                            </div>
                         </div>
                         <div class="col-lg-5">
                             <p style="color: springgreen; text-align: center;" class="mt-3">An explanation:</p>
                             <h3 style="color:deepskyblue;">The code is structured in 5 parts:</p>
-                            <p></p>
-                            <h4 style="color:floralwhite;">getValues()</h4>
-                            <p style="color:wheat;"><strong>getValues</strong> gets the user input from the page in the form of <strong>strings</strong> by utilizing
-                                <strong>getElementById</strong> to pull the values from the <strong>input</strong> fields.<br><br>
-                                Then we apply <strong>parseFloat</strong> to the strings to get <strong>Doubles</strong> to use for our purposes.<br><br>
-                                The <strong>if</strong> statement <strong>validates</strong> that <em>all</em> inputs were indeed Doubles and only allows us to proceed 
-                                if that is the case. Otherwise, we get an error message telling us to fix the input(s).<br><br>The Doubles are passed to the <strong>fizzBuzz()</strong> function.
-                            </p>
+                                <p></p>
+                                <h4 style="color:floralwhite;">getValues()</h4>
+                                <p style="color:wheat;"><strong>getValues</strong> gets the user input from the page in
+                                    the form of <strong>strings</strong> by utilizing
+                                    <strong>getElementById</strong> to pull the values from the <strong>input</strong>
+                                    fields.<br><br>
+                                    Then we apply <strong>parseFloat</strong> to the strings to get
+                                    <strong>Doubles</strong> to use for our purposes.<br><br>
+                                    The <strong>if</strong> statement <strong>validates</strong> that <em>all</em>
+                                    inputs were indeed Doubles and only allows us to proceed
+                                    if that is the case. Otherwise, we get an error message telling us to fix the
+                                    input(s).<br><br>The Doubles are passed to the <strong>amortize()</strong> function.
+                                </p>
 
-                            <h4 style="color:floralwhite;">amortize()</h4>
-                            <p style="color:wheat;"><strong>amortize</strong> takes in the parameters from getValues() and sets up the formula for calculating the amortization. <br>It also calls getContractBalance() to create a necessary variable based on parameters passed to it. <br>It runs the calculations on a month by month loop and builds an array of results for each. <br>Finally, is passes that array to the displayData() function.</p>
+                                <h4 style="color:floralwhite;">amortize()</h4>
+                                <p style="color:wheat;"><strong>amortize</strong> takes in the parameters from
+                                    getValues() and sets up the formula for calculating the amortization. <br>It also
+                                    calls generates its other necessary variables by calling other functions[calcPayment(), calcMonthlyRate(), calcMonthlyInterest(), calcMonthlyPrinciple(), calcTotalInterest(), calcNewBalance()]<br>It runs the calculations on a month by month loop and builds an array of
+                                    results for each. <br>Finally, is passes that array to the displayData() function.
+                                </p>
 
-                            <h4 style="color:floralwhite;">getContractBalance()</h4>
-                            <p style="color:wheat;"><strong>getContractBalance</strong> sets the current total to equal the: previous total plus 1 year of interest on the previous total.<br>The previous total is overwritten with the value of the current total.<br>Repeat this for each year of the loan to compound the APR.<br>Return the final result to be used in the amortize() function.</p>
+                                <h4 style="color:floralwhite;">calcPayment()</h4>
+                                <p style="color:wheat;"><strong>calcPayment</strong> takes in the numerical values submitted by the user.<br>
+                                    A "Relatively Simple" math formula is applied and we return the variable: 'payment' to be used in the amortize() function.
+                                </p>
+                                <h4 style="color:floralwhite;">calcMonthlyRate()</h4>
+                                <p style="color:wheat;"><strong>calcMonthlyRate</strong> takes in rate.<br>
+                                    The rate is divided by 1200 (12 months per year, and 100 per-cents).<br>
+                                    Return monthlyRate to be used in the amortize() function.
+                                </p>
+                                <h4 style="color:floralwhite;">calcMonthlyInterest()</h4>
+                                <p style="color:wheat;"><strong>calcMonthlyInterest</strong> takes in balance and monthlyRate<br>
+                                    The monthly rate is applied to the balance and monthlyInterest is returned to be used in the amortize() function.
+                                </p>
+                                <h4 style="color:floralwhite;">calcMonthlyPrinciple()</h4>
+                                <p style="color:wheat;"><strong>calcMonthlyPrinciple</strong> takes in payment and monthlyInterest<br>
+                                    The payment amount minus the monthlyInterest equals the monthly principle.<br>
+                                    Return monthlyPrinciple to be used in the amortize() function.
+                                </p>
+                                <h4 style="color:floralwhite;">calcTotalInterest()</h4>
+                                <p style="color:wheat;"><strong>calcTotalInterest</strong> takes in monthlyInterest and totalInterest.<br>
+                                    It exists to encapsulate the process for the rescursive adding of the current interest and then setting that new total interest to be used as a base in the next iteration.<br>
+                                    Return newTotalInterest to be used in the amortize() function.
+                                </p>
+                                <h4 style="color:floralwhite;">calcNewBalance()</h4>
+                                <p style="color:wheat;"><strong>calcNewBalance</strong> takes in balance and monthlyPrinciple.<br>
+                                    Makes the current balance equal the previous blance minus the current principle.
+                                    Return newBalance to be used in the amortize() function.
+                                </p>
 
-                            <h4 style="color:floralwhite;">displayData()</h4>
-                            <p style="color:wheat;"><strong>displayData</strong> displays the data, table layout style, onto the page. Most of the work was done in amortize(), so here it just loops over the passed in array (returnArray[i]) and prints one output per indexed entry.</p>
 
-                            <p style="color:deepskyblue; font-size: large;">
-                                The code is completed once the <strong>table</strong> on the APP page is filled with rows from the string <strong>templateRows</strong>.
-                            </p>
+                                <h4 style="color:floralwhite;">displayData()</h4>
+                                <p style="color:wheat;"><strong>displayData</strong> displays the data, table layout
+                                    style, onto the page. Most of the work was done in amortize(), so here it just loops
+                                    over the passed in array (returnArray[i]) and prints one output per indexed entry.
+                                </p>
 
-                            <h4 style="color:floralwhite;" class="text-muted">resetTable()</h4>
-                            <p style="color:wheat;" class="text-muted"><strong>resetTable</strong> is called by the Reset button, and simply assigns an empty string to <em>templateRows</em>, thus giving the table nothing to display.
-                            </p>
-                            <div class="border-1 border-bottom border-dark">
 
-                            </div>
+
+                                <p style="color:deepskyblue; font-size: large;">
+                                    The code is completed once the <strong>table</strong> on the APP page is filled with
+                                    rows from the string <strong>templateRows</strong>.
+                                </p>
+
+                                <h4 style="color:floralwhite;" class="text-muted">resetTable()</h4>
+                                <p style="color:wheat;" class="text-muted"><strong>resetTable</strong> is called by the
+                                    Reset button, and simply assigns an empty string to <em>templateRows</em>, thus
+                                    giving the table nothing to display.
+                                </p>
+                                <div class="border-1 border-bottom border-dark">
+
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -287,7 +339,8 @@
                 </div>
                 <div class="col-3 justify-content-end">
                     <span class="footerspan">
-                        <a class="footerlink" href="https://github.com/JuggernOtt81/Showcase/blob/main/mini-projects/loan-ranger/code.html"
+                        <a class="footerlink"
+                            href="https://github.com/JuggernOtt81/Showcase/blob/main/mini-projects/loan-ranger/code.html"
                             target="_blank">view code</a></span>
                 </div>
             </div>
@@ -306,7 +359,7 @@
     <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
     <!-- Prism JS -->
     <!-- <script src="/loan-ranger/app-js/prism.js"></script> -->
-<!--     <script>
+    <!--     <script>
         Prism.plugins.NormalizeWhitespace.setDefaults({
             'remove-trailing': true,
             'remove-indent': true,
