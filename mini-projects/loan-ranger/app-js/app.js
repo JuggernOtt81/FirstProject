@@ -1,4 +1,3 @@
-//get the values for calculations
 function getValues() {
   //get the values from the page
   var loanValue = document.getElementById("loanValue").value;
@@ -6,9 +5,9 @@ function getValues() {
   var rateValue = document.getElementById("rateValue").value;
 
   //parse into Doubles
-  var loanDouble = parseFloat(loanValue);
-  var termDouble = parseFloat(termValue);
-  var rateDouble = parseFloat(rateValue);
+  var loanDouble = parseFloat(loanValue).toFixed(2);
+  var termDouble = parseFloat(termValue).toFixed(2);
+  var rateDouble = parseFloat(rateValue).toFixed(2);
 
   //validate that entries are Doubles
   if (
@@ -21,84 +20,83 @@ function getValues() {
     alert("YOU MUST ENTER NUMBERS!");
   }
 }
-
+var returnArray = [];
 function amortize(loanDouble, termDouble, rateDouble) {
-  let returnArray = []; //initialize an array
-  var L = loanDouble.toFixed(2); //L = loaned ammount
-  var R = rateDouble.toFixed(2); //R = rate entered as a double
-  var T = termDouble.toFixed(2); //T = term in months
-  var y = T / 12; //years = term in months / 12
-  var r = R / 100000; //r = R converted into percentage rate
-  var tip = 0; //tip = total interest payments
-  var mip = 0; //mip = monthly interest payment
-  var mpp = 0; //mpp = monthly principle payment
-  var L = loanDouble;
-  var i = L * r; //i = interest on the loaned amount
-  var loanBalance = L; //starting value for the loop to use
-  var r12 = R / 1200; //rate to calculate interest per month
-  var mp = 0;
 
-  //starting value for the loop to use
-  var contractBalance = getContractBalance(L, i, y); 
-  var tmp = ((L * r12) / (1 - (1 + r12) ** -T)).toFixed(2);
-  contractBalance = (tmp * T).toFixed(2);
+  var payment = CalcPayment(loanDouble, rateDouble, termDouble);
+  var monthlyRate = 0.0;
+  var balance = loanDouble;
+  var totalInterest = 0;
+  var monthlyInterest = 0;
+  var monthlyPrinciple = 0;
+  var monthlyRate = CalcMonthlyRate(rateDouble);
+  var fMonth = "";
+  var newTotalInterest = 0;
+  var newBalance = 0;
 
-  //run algorithm and push results of each iteration into the array
-  for (iterator = 0; iterator < T + 1; iterator++) {
-    if (iterator > 0) {
-      returnArray.push(
-        `<tr><td>month #${iterator}</td>
-        <td>payment = ${tmp}</td>
-        <td>principle = ${mpp}</td>
-        <td>interest = ${mip}</td>
-        <td>total interest = ${tip}</td>
-        <td>loan balance = ${loanBalance}</td>`
-      );
-    } else {
-      returnArray.push(
-        `<tr><td>month #${iterator}</td>
-        <td>payment = ${0}</td>
-        <td>principle = ${mpp}</td>
-        <td>interest = ${mip}</td>
-        <td>total interest = ${tip}</td>
-        <td>loan balance = ${loanBalance}</td>`
-      );
-    }
-    //math for next iteration
-    mp = ((L * r12) / (1 - (1 + r12) ** -T)).toFixed(2);
-    mip = (loanBalance * r12).toFixed(2);
-    mpp = (tmp - mip).toFixed(2);
-    loanBalance = (loanBalance - mpp).toFixed(2);
-    contractBalance = (contractBalance - mpp).toFixed(2);
-    tip = parseFloat(tip) + parseFloat(mip);
-    tip = tip.toFixed(2);
+  for (let month = 0; month < termDouble; month++) {
+
+    monthlyInterest = CalcMonthlyInterest(balance, monthlyRate);
+    totalInterest = CalcTotalInterest(totalInterest, monthlyInterest);
+    monthlyPrinciple = CalcMonthlyPrinciple(payment, monthlyInterest);
+    newBalance = CalcNewBalance(balance, monthlyPrinciple);
+    balance -= monthlyPrinciple;
+    fMonth = (month + 1).toString();
+
+    returnArray.push(
+      `<tr><td>#${fMonth}</td><td>$${payment}</td><td>$${monthlyPrinciple}</td><td>$${monthlyInterest}</td><td>$${totalInterest}</td><td>$${newBalance}</td></tr>`
+    );
   }
+
+  TotalInterest = totalInterest;
+  TotalCost = loanDouble + totalInterest;
+
   displayData(returnArray);
 }
 
-//current total = (previous total + 1 year interest), 
-//then previous total = current total... 
-//loop for # of years (or term in months / 12)
-function getContractBalance(L, i, y) {
-  var ct = 0; //ct = current total
-  var ci = 0; //ci = current interest
-  var a = L + i; //a = loaned amount + interest
+function CalcPayment(loanDouble, rateDouble, termDouble) {
+  monthlyRate = CalcMonthlyRate(rateDouble);
+  var loan = loanDouble;
+  var term = termDouble;
+  var payment = (loan * monthlyRate) / (1 - (Math.pow(1 + monthlyRate, -term)));
 
-  for (iterator = 0; iterator < y; iterator++) {
-    ct += a;
-    ci = ct * i;
-    ct += ci;
-    a = 0;
-    console.log(ct);
-  }
-  return ct;
+  return payment.toFixed(2);
 }
 
-//display the results stored in the array, line by line
+function CalcMonthlyRate(rateDouble) {
+  monthlyRate = rateDouble / 1200;
+  return monthlyRate;
+}
+
+function CalcMonthlyInterest(balance, monthlyRate) {
+  monthlyInterest = balance * monthlyRate;
+  return monthlyInterest.toFixed(2);
+}
+
+function CalcMonthlyPrinciple(payment, monthlyInterest) {
+  monthlyPrinciple = payment - monthlyInterest;
+  return monthlyPrinciple.toFixed(2);
+}
+
+function CalcTotalInterest(totalInterest, monthlyInterest) {
+  let a = parseFloat(totalInterest);
+  let b = parseFloat(monthlyInterest);
+  let x = a + b;
+  newTotalInterest = x.toFixed(2);
+
+  return newTotalInterest;
+}
+
+function CalcNewBalance(balance, monthlyPrinciple) {
+  let x = balance - monthlyPrinciple;
+  newBalance = parseFloat(x);
+
+  return newBalance.toFixed(2);
+}
+
 function displayData(returnArray) {
   let templateRows = "";
   for (let i = 0; i < returnArray.length; i++) {
-    let number = returnArray[i];
     templateRows += `${returnArray[i]}`;
   }
   document.getElementById("results").innerHTML = templateRows;
